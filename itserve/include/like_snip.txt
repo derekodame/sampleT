@@ -1,0 +1,102 @@
+like (
+<?php 
+error_reporting(E_ALL^E_NOTICE);
+include("ClassDatabase.php");
+
+//include"connection.php";
+
+
+function article_exists($article_id){
+$article_id = (int)$article_id;	
+return (mysql_result(mysql_query("SELECT COUNT(id) FROM comment WHERE id='$article_id'"),0)== 0) ? false: true;
+	
+	}
+
+
+
+
+
+function previously_liked($article_id,$iddd){
+
+$article_id = (int)$article_id;	
+	return (mysql_result(mysql_query("SELECT COUNT(id) FROM liketb WHERE user_id = '$iddd' AND liked ='$article_id'"),0))? false:true;
+	}
+
+function like_count($article_id){
+$article_id= (int)$article_id;
+return mysql_result(mysql_query("SELECT likee FROM comment WHERE id = $article_id"),0,'likee');	
+	}
+	
+function add_like($article_id,$iddd){
+$article_id =(int)$article_id;
+mysql_query("UPDATE comment SET likee = likee + 1 WHERE id = $article_id");
+
+mysql_query("INSERT INTO liketb VALUES('','$iddd','$article_id')");	
+	}
+
+
+function sub_like($article_id,$iddd){
+$article_id =(int)$article_id;
+
+
+mysql_query("UPDATE comment SET likee = likee - 1 WHERE id = $article_id");
+mysql_query("DELETE FROM liketb WHERE user_id='$iddd' AND liked='$article_id'");
+	}
+/*echo add_like(152,$idd);
+echo $idd;
+echo previously_liked(1,$idd);
+
+if(previously_liked(1,$idd)=== true){
+	echo "you've already";
+	}
+*/	
+?>
+)
+
+
+
+
+likeget(<?php 
+
+include("like.php");
+
+if(isset($_POST['article_id'],$idd) && article_exists($_POST['article_id'],$idd)){
+	
+	
+	echo like_count($_POST['article_id']);
+	}
+
+
+
+
+
+
+?>
+
+)
+
+likeshow(
+<?php 
+//include("ClassDatabase.php");
+include("like.php");
+//include("connection.php");
+if(isset($_POST['article_id'],$idd) && article_exists($_POST['article_id'],$idd)){
+	
+	
+	
+	$article_id =$_POST['article_id'];
+	if(previously_liked($article_id,$idd)=== true){
+	//sub_like($article_id,$idd);
+	sub_like($article_id,$idd);
+		//echo "Already Liked";
+		}else
+			add_like($article_id,$idd);
+				echo ' ';
+		
+	}
+
+
+	
+
+?>
+)
