@@ -32,13 +32,13 @@ if($_POST['done']){
 							if($occupation){
 								if($sex){
 									
-									 $query = mysqli_query($con,"SELECT * FROM itserve1 WHERE email = '$email'");
-									 $numrows = mysql_num_rows($query);
-									 if ($numrows == 0 ){
-										$date = date("F d, Y");
-									$code = md5(rand()); 
+$query = mysqli_query($con,"SELECT * FROM itserve1 WHERE email = '$email'");
+ $numrows = mysql_num_rows($query);
+	 if ($numrows == 0 ){
+	$date = date("F d, Y");
+	$code = md5(rand()); 
 							 
-				$query = mysqli_query($con,"INSERT INTO itserve1 VALUES('','$firstname', '$lastname','$email','$password','$occupation','$sex', '$age','$date','$code','','','','')");
+$query = mysqli_query($con,"INSERT INTO itserve1 VALUES('','$firstname', '$lastname','$email','$password','$occupation','$sex', '$age','$date','$code','','','','')");
 		/*$webmaster = "Your Itserve <attrams.shop@gmail.com>";
 		$header = "From: $webmaster";
 		$site = "http://itserve.bugs3.com \n";
