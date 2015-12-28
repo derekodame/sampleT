@@ -15,6 +15,7 @@ while($row=mysqli_fetch_array($query)){
 	
 	$a =ucfirst( $row['a']);
 	$b = ucfirst($row['b']);
+	$id = ($row['id']);
 	
 	
 
@@ -28,6 +29,6 @@ while($row=mysqli_fetch_array($query)){
 		
 		
 
-	echo "<table id='uptable'   ><tr ><td>".$b."</td><td>".$a."</td><th id='th'>X</th></tr></table>";
+	echo "<table id='uptable'   ><tr ><td>".$b."</td><td><a  href='../pictures/$a' title ='download $a'>".$a."</a></td><th id='th' class='$a' onclick='del($id);' >X</th></tr></table>";
 	}
 ?>

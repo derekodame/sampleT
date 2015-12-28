@@ -21,11 +21,12 @@ echo "Error: Please browse for a file before clicking the upload button";
 exit();
 }
 
+if($fileName){
 if($namedfile){
 if($_FILES['excel']['type']=="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"){
 
 
-$query = mysqli_query($con,"SELECT * FROM test WHERE b = '$namedfile '");
+$query = mysqli_query($con,"SELECT * FROM test WHERE a = '$fileName '");
  $numrows = mysqli_num_rows($query);
 	 if ($numrows == 0 ){
 $query = mysqli_query($con,"INSERT INTO test VALUES('','$fileName', '$namedfile')");
@@ -40,48 +41,24 @@ if(move_uploaded_file($fileTmpLoc, "../pictures/" . $fileName)){
 		}
 
 
-}else echo "Already exist ";
+}else {
+	
+	echo "<span style='color:orange;'>".ucfirst($fileName)."</span>".", Already exists, you can delete to add new file" ;
+
+	
+	
+	}
 
 }else echo "Only accepts excel files !!";
-}else echo "Please give the file a name ";
+}else echo "Please give the file name ";
+}else echo "Browse for a file";
 
 
 
 
-//$tmp= $_FILES['excel']['tmp_name'];
 
 
 
 
-/*if($tmp){
-
-	
-	move_uploaded_file($tmp,"../pictures/".$_FILES['excel']['name']);
-
-	echo $tmp;
-	
-}else echo "Upload An Image";
-*/
-
-/*
-for($i=0; $i<count($_FILES['excel']['name']); $i++) {
-  //Get the temp file path
-  $tmpFilePath = $_FILES['excel']['tmp_name'][$i];
-
-  //Make sure we have a filepath
-  if ($tmpFilePath != ""){
-    //Setup our new file path
-    $newFilePath = "../pictures/".$_FILES['excel']['name'][$i];
-
-    //Upload the file into the temp dir
-    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-
-      //Handle other code here
-	  echo 
-
-    }
-  }
-}
-*/
 
 ?>

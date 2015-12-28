@@ -74,7 +74,7 @@ for drop
 
 <form enctype="multipart/form-data" method="post">
 <input type="text" >
-<input type="button" value="add">
+<input type="button"  value="add">
 </form>
 </div>
 </div>

@@ -41,7 +41,20 @@ $('#dropdown_box').click(function(){
 	
 	});
 	
-	
+function del(d){
+		//alert(d);
+		
+		$.post('../functions/deleteupload.php', {deletee:d},function(data){
+			
+				if(data !=" "){
+				$("#showUpload").load("../functions/uploadshow.php");
+			//	alert(data);
+				
+				
+				}
+			
+				});
+}
 	
 	
 	
@@ -67,6 +80,8 @@ $('#dropdown_box').click(function(){
     if (ajax.readyState == 4 && ajax.status == 200) {
     document.getElementById("success").innerHTML = ajax.responseText;
 	$("#showUpload").load("../functions/uploadshow.php");
+	
+	
     }
   };
 	
@@ -78,17 +93,18 @@ $('#dropdown_box').click(function(){
 //$("#excel").val("");
 
 	
-	
+	_('excel').ondrop=function(){
+		
+		alert(2);
+		};
 	
 	}
 	
-	
+
 	
 	/// upload end////////////////
 	
-	
-	
-	
+
 	
 /*	
 	$('#excelb').click(function(){
