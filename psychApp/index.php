@@ -9,7 +9,7 @@
 <title>Untitled Document</title>
 <link type="text/css" href="./css/login.css" rel="stylesheet"/>
 </head>
-<center><a href="main/admin.php" style="color:white; font-size:50px;" >preview link to admin...</a></center>
+<center><a href="main/admin" style="color:white; font-size:50px;" >preview link to admin...</a></center>
 <body id="s" >
 <div id="top"></div>
 

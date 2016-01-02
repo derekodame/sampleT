@@ -16,8 +16,8 @@ if($num ==1){
 	$row = mysqli_fetch_array($query);
 	$n = $row['a'];
 	
-unlink("../pictures/$n");
-
-}
+unlink("../file/$n");
 mysqli_query($con,"DELETE FROM test WHERE id = '$dbid'");
+}
+
 ?>

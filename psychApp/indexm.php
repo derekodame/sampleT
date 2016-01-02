@@ -1,11 +1,11 @@
-<?php include "./functions/register.php"?>
-<?php include "./functions/login.php"?>
+<?php include "functions/register.php"?>
+<?php include "functions/login.php"?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-<link type="text/css" href="./mobileCss/mobileLogin.css" rel="stylesheet"/>
+<link type="text/css" href="mobileCss/mobileLogin.css" rel="stylesheet"/>
 </head>
 <body id="s" >
 <div id="login">

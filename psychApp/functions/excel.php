@@ -32,7 +32,7 @@ $query = mysqli_query($con,"SELECT * FROM test WHERE a = '$fileName '");
 $query = mysqli_query($con,"INSERT INTO test VALUES('','$fileName', '$namedfile')");
 
 
-if(move_uploaded_file($fileTmpLoc, "../pictures/" . $fileName)){
+if(move_uploaded_file($fileTmpLoc, "../file/" . $fileName)){
 	
 	echo " <span style='color:red;'>". $fileName."</span> was successfully uploaded";
 	

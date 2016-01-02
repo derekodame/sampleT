@@ -18,6 +18,8 @@
 
 <!-- search result area-->
 <div id="search_result">
+
+result page
 </div>
 
 

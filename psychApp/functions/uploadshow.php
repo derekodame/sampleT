@@ -29,6 +29,6 @@ while($row=mysqli_fetch_array($query)){
 		
 		
 
-	echo "<table id='uptable'   ><tr ><td>".$b."</td><td><a  href='../pictures/$a' title ='download $a'>".$a."</a></td><th id='th' class='$a' onclick='del($id);' >X</th></tr></table>";
+	echo "<table id='uptable'   ><tr ><td>".$b."</td><td><a  href='../file/$a' title ='download $a'>".$a."</a></td><th id='th' class='$a' onclick='del($id);' >X</th></tr></table>";
 	}
 ?>
