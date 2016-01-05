@@ -59,6 +59,7 @@ function del(d){
 	
 	
 	/// upload------------////////////////
+	$('#successs').hide();
 	
 	function _(id){
 	return document.getElementById(id);
@@ -75,33 +76,24 @@ function del(d){
 	
 	var ajax = new XMLHttpRequest();
 	
+	$('#successs').show();
 	
 	 ajax.onreadystatechange = function() {
     if (ajax.readyState == 4 && ajax.status == 200) {
     document.getElementById("success").innerHTML = ajax.responseText;
 	$("#showUpload").load("../functions/uploadshow.php");
-	
-	
+	$('#successs').hide();
     }
   };
 	
 	
 	ajax.open("POST", "../functions/excel.php",true);
 	ajax.send(formdata);
+}
+	
+//ondrop excel------
 
-//alert(namedfile);
-//$("#excel").val("");
 
-	
-	_('excel').ondrop=function(){
-		
-		alert(2);
-		};
-	
-	}
-	
-
-	
 	/// upload end////////////////
 	
 

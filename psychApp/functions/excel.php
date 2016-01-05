@@ -1,5 +1,5 @@
 <?php 
- error_reporting(E_ALL ^ E_NOTICE);
+include"../functions/error.php";
 require("connection.php");
 
 session_start();
@@ -20,30 +20,33 @@ if(!$fileTmpLoc){
 echo "Error: Please browse for a file before clicking the upload button";
 exit();
 }
-
+$refilename = $namedfile.".xlsx";
 if($fileName){
 if($namedfile){
 if($_FILES['excel']['type']=="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"){
 
 
-$query = mysqli_query($con,"SELECT * FROM test WHERE a = '$fileName '");
+$query = mysqli_query($con,"SELECT * FROM test WHERE b = '$namedfile'");
  $numrows = mysqli_num_rows($query);
 	 if ($numrows == 0 ){
-$query = mysqli_query($con,"INSERT INTO test VALUES('','$fileName', '$namedfile')");
-
-
-if(move_uploaded_file($fileTmpLoc, "../file/" . $fileName)){
+		 
 	
-	echo " <span style='color:red;'>". $fileName."</span> was successfully uploaded";
+
+
+
+if(move_uploaded_file($fileTmpLoc, "../file/" . $refilename)){
+	$query = mysqli_query($con,"INSERT INTO test VALUES('','$refilename', '$namedfile')");
+	
+	echo " <span style='color:red; font-size=20px;'>". $refilename."</span> was successfully uploaded";
 	
 	}else{
-		echo "move_uploaded_file function failed";
+		echo "Upload failed. Could be name given or File name format";
 		}
 
 
 }else {
 	
-	echo "<span style='color:orange;'>".ucfirst($fileName)."</span>".", Already exists, you can delete to add new file" ;
+	echo "<span style='color:blue;'>".ucfirst($refilename)."</span>".", Already exists, you can delete to add new file" ;
 
 	
 	

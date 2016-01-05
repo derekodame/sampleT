@@ -28,5 +28,24 @@ $(document).keyup(function(ee){
 		}
 		});
 		
+/// scroll ----
+	
+function Scroll(){
+var top = document.getElementById('search_top');
+var ypos = window.pageYOffset;
+if(ypos > 100) {
+	//top.style.opacity = "0";
+	
+	top.style.top = "0";
+	top.style.position ="fixed";
+	top.style.zIndex="5";
+
+}
+else{
+top.style.top = "";
+	top.style.position ="";
+	}
+}
+	window.addEventListener("scroll",Scroll);
 	
 	

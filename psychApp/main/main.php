@@ -17,14 +17,14 @@
 </div>
 
 <!-- search result area-->
+
+
+
+</div>
+
 <div id="search_result">
-
-result page
-</div>
-
+<?php include"../functions/group.php";?>
 
 </div>
-
-
 
 <?Php include "../functions/footer.php";?>

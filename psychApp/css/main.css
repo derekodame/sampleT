@@ -28,7 +28,7 @@ font-size:26px;}
 	position: relative;
 	border-top: thin solid #99CBAD;
 	margin: auto;
-	height: 600px;
+	height: 50px;
 	border-collapse: collapse;
 
 	}
@@ -105,8 +105,8 @@ font-size:26px;}
 	top:130px;
 	margin:auto;
 	width:100%;
-	border:thin solid green;
-	height:500px;}
+	dborder:thin solid green;
+	fheight:500px;}
 	
 	
 /*---------------- admin-------------*/
@@ -255,10 +255,17 @@ margin:1px;
 	background-color:#F3EEEE;
 
 	}
-#aa:hover{
+#aa:hover{ 
 	
 	font-size:20px;
 	color:white;
 	background-color:green;
+	
+	}
+#group td{
+	
+	
+	width:300px;
+	
 	
 	}
