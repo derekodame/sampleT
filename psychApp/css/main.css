@@ -66,7 +66,7 @@ font-size:26px;}
 	border-radius:4px;}
 	
 #left_dropdown {
-	top:0px;
+	top:5px;
 	position:absolute;
 	font-size: 24px;
 	border-right: thin solid #99CBAD ;
@@ -75,7 +75,20 @@ font-size:26px;}
 	
 	
 }
-#left_dropdown div{
+#left_dropdown select{
+	position:relative;
+	
+	font-size: 24px;
+	
+	color: #0FD70C;
+	width:300px;
+	border:thin solid green;
+	
+	mmargin:5px
+	
+	
+}
+#left_dropdown option{
 	position:relative;
 	
 	font-size: 24px;
@@ -88,21 +101,11 @@ font-size:26px;}
 	
 	
 }
-#left_dropdown div:hover{
-	position:relative;
-	
-	font-size: 24px;
-	
-	color: white;
-	width:300px;
-	border:thin solid green;
-	margin:5px;
-	cursor:pointer;
-	background-color:#39C12E;}
+
 	
 #search_result{
 	position:relative;
-	top:130px;
+	top:60px;
 	margin:auto;
 	width:100%;
 	dborder:thin solid green;

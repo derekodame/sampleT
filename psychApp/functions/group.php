@@ -7,6 +7,8 @@ require("connection.php");
 session_start();
 $emailss = $_SESSION['email'];
 
+
+
 $query = mysqli_query($con, "select * from groupp order by id DESC");
 
 echo "<table border='1' id='groudp'   ><tr ><td ><center><div style='width:200px; overflow-x: hidden;'>stage of change</div></center></td><td><center><div style='width:200px; overflow-x: hidden;'>Symptoms and Disorders</div></center></td><td><center><div style='width:200px; overflow-x: hidden;'>Psychological Treatment</div></center></td><td><center><div style='width:200px; overflow-x: hidden;'>Evidence Level</div></center></td><td><center><div style='width:495px; overflow-x: hidden;'>Basis for Evidence</div></center></td></tr></table>";

@@ -4,17 +4,17 @@
 
 $('#age').click(function(){
 	var v = $('#age').text();
-	$('#search').val(v);
+	
 	});
 
 $('#SympDisorder').click(function(){
 	var v = $('#SympDisorder').text();
-	$('#search').val(v);
+	
 	});
 
 $('#stage_of_change').click(function(){
 	var  v = $('#stage_of_change').text();
-	$('#search').val(v);
+	
 	});
 	
 //logout keytype----------
@@ -32,6 +32,7 @@ $(document).keyup(function(ee){
 	
 function Scroll(){
 var top = document.getElementById('search_top');
+var lefttop = document.getElementById('left_dropdown');
 var ypos = window.pageYOffset;
 if(ypos > 100) {
 	//top.style.opacity = "0";
@@ -39,13 +40,40 @@ if(ypos > 100) {
 	top.style.top = "0";
 	top.style.position ="fixed";
 	top.style.zIndex="5";
+	top.style.backgroundColor="white";
+	lefttop.style.top = "0";
+	lefttop.style.position ="fixed";
+	lefttop.style.zIndex="5";
+	lefttop.style.backgroundColor="white";
 
 }
 else{
 top.style.top = "";
 	top.style.position ="";
+	lefttop.style.top = "";
+	lefttop.style.position ="";
 	}
 }
 	window.addEventListener("scroll",Scroll);
 	
+///-------------
+	
+function _(id){
+	return document.getElementById(id);
+	}
+	
+	function searchh(){
+		var sv = $('#search').val();
+		
+	$.get("../functions/searchh.php", {sv:sv},function(data){
+	
+
+$('#search_result').html(data) 	;
+	});
+	 
+
+
+}
+	
+
 	
