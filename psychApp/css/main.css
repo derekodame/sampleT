@@ -106,11 +106,21 @@ font-size:26px;}
 #search_result{
 	position:relative;
 	top:60px;
-	margin:auto;
+	margin-top:auto;
 	width:100%;
 	dborder:thin solid green;
 	fheight:500px;}
 	
+#groupp{
+	position:fixed;
+	bottom:0px;
+	left:65px;
+	
+	border:thin solid #A38F8F;
+	background-color:#807676;
+	
+	
+	}
 	
 /*---------------- admin-------------*/
 

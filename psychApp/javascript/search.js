@@ -1,6 +1,8 @@
 // JavaScript Document
 
-
+function _(id){
+	return document.getElementById(id);
+	}
 
 $('#age').click(function(){
 	var v = $('#age').text();
@@ -28,11 +30,22 @@ $(document).keyup(function(ee){
 		}
 		});
 		
+$(document).keyup(function(ee){
+	    if(ee){keycode = ee.keyCode}else keycode =event.keyCode; //or below
+	 // ee? keycode = ee.keyCode : keycode =event.keyCode;
+	  //console.log(keycode);
+	   if(keycode == 27){
+		window.location="../functions/logout.php";	  
+		}
+		});
+		
 /// scroll ----
 	
 function Scroll(){
 var top = document.getElementById('search_top');
 var lefttop = document.getElementById('left_dropdown');
+var groupp = document.getElementById('groupp');
+
 var ypos = window.pageYOffset;
 if(ypos > 100) {
 	//top.style.opacity = "0";
@@ -46,34 +59,45 @@ if(ypos > 100) {
 	lefttop.style.zIndex="5";
 	lefttop.style.backgroundColor="white";
 
+	
+	$('#groupp').show();
+
+	
+	
+
 }
 else{
 top.style.top = "";
 	top.style.position ="";
 	lefttop.style.top = "";
 	lefttop.style.position ="";
+	$('#groupp').hide();
+	
+	
 	}
 }
-	window.addEventListener("scroll",Scroll);
+window.addEventListener("scroll",Scroll);
 	
 ///-------------
 	
-function _(id){
-	return document.getElementById(id);
-	}
-	
-	function searchh(){
-		var sv = $('#search').val();
-		
-	$.get("../functions/searchh.php", {sv:sv},function(data){
-	
 
+$('#successsh').hide();
+
+function searchh(){
+$('#successsh').show();
+var sv = $('#search').val();
+var sel = $('#sel').val();
+
+$.get("../functions/searchh.php", {sv:sv,sel:sel},function(data){
+	
+	
 $('#search_result').html(data) 	;
-	});
-	 
 
-
+$('#successsh').hide();
+});
 }
+
+
 	
 
 	
