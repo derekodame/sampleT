@@ -1,6 +1,7 @@
 <?php 
 include"../functions/connection.php";
 include"../functions/error.php";
+include"../functions/adminf.php";
 
 
 ?><!doctype html>
@@ -83,30 +84,16 @@ Stage of change</center>
 
 </div><br/><br/><br/><br/><br/><br/><br/><br/>
 <div></div>
-<center><span id="s"></span><br/>
-<input type="button" id="adde" onClick="adde();" style="cursor:pointer;" value="add"></center>
+<center><div id='ed' style="position:fixed; top:80px; left:670px;" >
+<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:24px;" value="add"><span id="s" style="font-size:24px";></span></div></center>
 <br/><br/>
 
-<center>
-<?php 
-
-$queryt = mysqli_query($con, "select * from groupp order by id DESC ");
-
-$num =mysqli_num_rows($queryt);
-$div = ($num/50);
-$p= ceil($div);
-echo "preview";
+<center><span id='ii' style="position:fixed; top:113px;  left:600px;font-size:25px;"></span>
+<span id="page"><?php pagination($con);?></span>
 
 
-for($b =1; $b<=$p; $b++){
-	
-	
-	echo "<span id='$b' href='#' onClick='pag($b);'  style='margin:5px; background-color:grey; color:white; padding:0 5px 0  5px; cursor:pointer;'>$b</span>";
-	}
-	echo "next";
-?>
 <div id ="adminsr"></div>
-<div id ="adminsrp">pagination</div>
+<div  id ="adminsrp">pagination</div>
 </center>
 
 

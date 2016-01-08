@@ -94,17 +94,36 @@ window.addEventListener("scroll",Scroll);
 ///pagination 
 
 function pag(v){
-
+	
+	
+	
+	
+	
+	
+	
 	$("#adminsr").hide();
 	$("#adminsrp").show();
+	
+	
 	$.get('../functions/pagination.php', {v:v},function(data){
 	$("#adminsrp").html( data);
 
+$("#ii").html('You are on page '+ v+" ");
 
-	
 			});
 	
 }
 
+function t(v){
+	var vb = document.getElementById(v);
+	var vbb = $('#'+v).text();
+	var bb = $("#ii").html('You are on page '+ v+" ");
+	var bn = "You are on page "+ vbb+" ";
 	
+		if(bb==bn){
+			vb.style.color='red';
+			}else{
+				vb.style.color='green';
+					}
 	
+}

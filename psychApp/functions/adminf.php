@@ -21,11 +21,23 @@ echo "<table id='cliental' > <tr><td><a href='#'>$id</a></td> <td>$first</td><td
 	
 	}
 
-function clientDelete(){}
+function pagination($con){
+	
+	$queryt = mysqli_query($con, "select * from groupp order by id DESC ");
 
-function clientUpdate(){}
+$num =mysqli_num_rows($queryt);
+$div = ($num/25);
+$p= ceil($div);
+echo "preview";
 
-function clientAlll(){}
+
+for($b =1; $b<=$p; $b++){
+	
+	
+	echo "<span id='$b' href='#' onClick='pag($b);'  style=' border-radius:4px; margin:5px; background-color:grey; color:white; padding:0 5px 0  5px; cursor:pointer;'>$b</span>";
+	}
+	echo "next";
+	}
 
 
 
