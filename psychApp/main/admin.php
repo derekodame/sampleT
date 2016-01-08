@@ -75,7 +75,12 @@ if($emailad){
 for drop
 
 <form enctype="multipart/form-data" method="post">
-<input type="text" >
+<select>
+<option>Age</option>
+<option>Stage of change</option>
+<option>Symptoms and Disorders</option>
+</select><br/>
+<input type="text"  placeholder="Psychological Treatment"><input type="text" placeholder="Evidence Level" ><input type="text" placeholder="" >
 <input type="button"  value="add">
 </form>
 </div>

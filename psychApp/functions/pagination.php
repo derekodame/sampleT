@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 
 
  error_reporting(E_ALL ^ E_NOTICE);
@@ -7,9 +8,11 @@ require("connection.php");
 session_start();
 $emailss = $_SESSION['email'];
 
+$pagee = $_GET['v'];
 
+$p = $pagee -1;
 
-$query = mysqli_query($con, "select * from groupp order by id DESC limit  0, 25");
+$query = mysqli_query($con, "select * from groupp order by id DESC limit  $p, 25");
 
 
 echo "<table border='1' id='groupd'  style='background-color:grey;'  ><tr ><td><div style='width:80px; overflow-x: hidden;'>age</div></td><td ><center><div style='width:140px; overflow-x: hidden;'>stage of change</div></center></td><td><center><div style='width:140px; overflow-x: hidden;'>Symptoms and Disorders</div></center></td><td><center><div style='width:200px; overflow-x: hidden;'>Psychological Treatment</div></center></td><td><center><div style='width:120px; overflow-x: hidden;'>Evidence Level</div></center></td><td><center><div style='width:500px; overflow-x: hidden;'>Basis for Evidence</div></center></td></tr></table>";
@@ -38,3 +41,5 @@ $('#groupp').hide();
 
 
 </script>
+
+ 

@@ -46,9 +46,12 @@ var top = document.getElementById('search_top');
 var lefttop = document.getElementById('left_dropdown');
 var groupp = document.getElementById('groupp');
 
+
 var ypos = window.pageYOffset;
 if(ypos > 100) {
 	//top.style.opacity = "0";
+	
+	$('#groupp').show();
 	
 	top.style.top = "0";
 	top.style.position ="fixed";
@@ -60,18 +63,19 @@ if(ypos > 100) {
 	lefttop.style.backgroundColor="white";
 
 	
-	$('#groupp').show();
+	
 
 	
 	
 
 }
 else{
+	$('#groupp').hide();
 top.style.top = "";
 	top.style.position ="";
 	lefttop.style.top = "";
 	lefttop.style.position ="";
-	$('#groupp').hide();
+	
 	
 	
 	}

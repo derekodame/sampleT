@@ -8,17 +8,34 @@
 <div id="left_dropdown">
 <select id="sel">
 <option>Age</option>
-<option>Stage of Change</option>
-<option>Symptoms & Disorders</option>
-<option>Psychological Treatment</option>
-<option>Evidence Level</option>
-<option>Basis for Evidence</option>
-</select>
+<option>Child</option>
+<option>Adolescent</option>
+<option>Adult</option>
 
+</select>
+<select id="selst">
+
+<option>Stage of Change</option>
+<option>Precontemplation</option>
+<option>Contemplation</option>
+<option>Preparation</option>
+<option>Action</option>
+<option>Maintenance</option>
+</select>
+<select id="selsy">
+<option>Symptoms & Disorders</option>
+<option>Anorexia</option>
+<option>Anxiety (general symptoms)</option>
+<option>ADHD</option>
+<option>	
+Autism Spectrum (lower functioning)</option>
+
+</select>
+<input id="done_search_s" type="button" onclick="searchh_s();" value="search"/>
 </div>
 
 <div id ="search_top">
-<input id="search" type="search"  onKeyUp="searchh();"  placeholder="Search through here, <?php echo $first." ". $last."...";?>"/>
+<input id="search" type="search"  onKeyUp="searchh();"  placeholder="Search through..."/>
 <input id="done_search" type="button" onclick="searchh();" value="search"/>
 
 <div id='ser'>

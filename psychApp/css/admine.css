@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#dropp input{
+	
+	width:200px;
+	basckground-color:red;
+	}
+
+#dropp div{
+	lborder:thin solid green;
+	float:left;
+	width:200px;
+	margin:3px;
+	}
+#dropp textarea{
+	lborder:thin solid green;
+	float:left;
+	width:193px;
+	margin:3px;
+	}
+#groupp{
+	position:fixed;
+	bottom:0px;
+	left:65px;
+	
+	border:thin solid #A38F8F;
+	background-color:#807676;
+	
+	
+	}
+	
