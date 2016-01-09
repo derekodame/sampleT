@@ -84,16 +84,35 @@ Stage of change</center>
 
 </div><br/><br/><br/><br/><br/><br/><br/><br/>
 <div></div>
-<center><div id='ed' style="position:fixed; top:80px; left:670px;" >
-<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:24px;" value="add"><span id="s" style="font-size:24px";></span></div></center>
+<center><div id='ed' style="" >
+<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:18px; position:fixed; top:0px; right:0px;" value="Insert">
+
+<span id="s" style="font-size:24px; position:fixed; top:80px; left:670px;";></span></div></center>
 <br/><br/>
 
 <center><span id='ii' style="position:fixed; top:113px;  left:600px;font-size:25px;"></span>
-<span id="page"><?php pagination($con);?></span>
+<span id='hidden' style="position:fixed; top:113px;  left:-100px;font-size:25px;">1</span>
+
+
+<button id='prev' style='cursor:pointer; top:200px; position:fixed; left:1px;' >preview </button><button id='nextt' style='cursor:pointer;top:200px; position:fixed; right:1px;' >next</button>
+
+<span id="page">
+
+
+<?php pagination($con);?>
+
+</span>
+
+<span id="page2">
+
+
+<?php pagination($con);?>
+
+</span>
 
 
 <div id ="adminsr"></div>
-<div  id ="adminsrp">pagination</div>
+<div  id ="adminsrp"></div>
 </center>
 
 
