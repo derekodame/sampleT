@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+
+#top{ 
+position:absolute;
+width:99%;
+float:right;
+
+	
+	}
+
+#logout a{
+	float: left;
+	color: #EB1507;
+	font-size: 26px;
+	
+}
+
+
+#welcome{float:right;
+color:#CD9916;
+font-size:26px;}
+
+/*search area ---------------*/
+#search_body{
+	width: 1160px;
+	top: 50px;
+	position: relative;
+	border-top: thin solid #99CBAD;
+	margin: auto;
+	height: 50px;
+	border-collapse: collapse;
+
+	}
+#search_top{
+	position:absolute;
+	top: 5px;
+	right: 15px;
+}
+#search{
+	color:green;
+	width:200px;
+	}
+#search:hover{
+		background-color:green;
+	color:white;
+ border: thin solid black ;
+	width:200px;
+	}
+	
+	
+#search_top input{
+	font-size:24px;
+	border:thin solid green;
+	}
+	
+#done_search:hover{
+	cursor:pointer;
+	background-color:green;
+	color:white;
+	}
+
+#done_search{
+	color:green;
+	background-color:#F3EEEE;
+	border-radius:4px;}
+	
+#done_search_s{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+	border-radius:4px;}
+	
+#done_search_s:hover{
+	font-size:20px;
+	cursor:pointer;
+	background-color:green;
+	color:white;
+	}
+
+	
+#left_dropdown {
+	top:5px;
+	position:relative;
+	font-size: 24px;
+	border-right: thin solid #99CBAD ;
+	width:820px;
+
+	
+	
+}
+#left_dropdown select{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: #0FD70C;
+	width:240px;
+	border:thin solid green;
+	
+	mmargin:5px
+	
+	
+}
+#left_dropdown option{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: #0FD70C;
+	width:300px;
+	border:thin solid green;
+	
+	margin:5px
+	
+	
+}
+
+	
+#search_result{
+	position:relative;
+	top:60px;
+	margin-top:auto;
+	width:100%;
+	dborder:thin solid green;
+	fheight:500px;}
+	
+#groupp{
+	position:fixed;
+	bottom:0px;
+	left:65px;
+	
+	border:thin solid #A38F8F;
+	background-color:#807676;
+	
+	
+	}
+	
+/*---------------- admin-------------*/
+
+#admin{
+	top:70px;
+	position:relative;
+	margin:auto;
+	width:1050px;
+	
+	border-top:thin solid #99CBAD;
+	height:600px;
+	}
+
+#left_admin{ 
+position:relative;
+float:left;
+
+
+border-right:thin solid #99CBAD;
+width:300px;
+}
+
+#left_admin div{
+		color: #0FD70C;
+		margin:5px;
+	
+	
+	border:thin solid green;
+	font-size:28px;
+	}
+#left_admin div:hover{
+	font-size:28px;
+		color: white;
+	cursor:pointer;
+	border:thin solid green;
+	background-color:#39C12E;
+	}
+
+
+#right_admin{ 
+	margin:5px;
+position:relative;
+float:right;
+
+dborder:thin solid red;
+width:700px;
+}
+
+#right_admin div{
+		
+		margin:5px;
+	
+	
+	dborder:thin solid green;
+	font-size:18px;
+	}
+	
+	#clientall {
+	
+	
+kborder:thin solid blue;
+
+margin:1px;
+}
+#clientall td{
+	float:left;
+	width:129px;
+	font-size:21px;
+
+color:green;
+
+margin:1px;
+}
+
+
+#cliental td{
+	float:left;
+	width:130px;
+	font-size:18px;
+	background-color:#D7C7C7;
+	margin:1px;
+	
+	}
+#uptable td{
+	float:left;
+	width:230px;
+	font-size:18px;
+	background-color:#D7C7C7;
+	margin:1px;
+	}
+	
+#uptablee td{
+float:left;
+	width:230px;
+	font-size:21px;
+
+color:green;
+
+margin:1px;
+	}
+
+#th{
+float:left;
+font-size:21px;
+color:orange;
+margin:1px;
+border:0;
+	}
+#th:hover{
+	cursor:pointer;
+float:left;
+font-size:21px;
+color:red;
+margin:1px;
+	}
+	
+/* upload----- */
+
+#excel{
+	kborder:thin solid blue;
+	
+	color:white;
+	font-size:18px;
+	background-color:green;
+	
+	
+	}
+	
+#excelb{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+	
+	}
+#excelb:hover{
+	cursor:pointer;
+	font-size:20px;
+	color:white;
+	background-color:green;
+
+	}
+#aa{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+
+	}
+#aa:hover{ 
+	
+	font-size:20px;
+	color:white;
+	background-color:green;
+	
+	}
+#group td{
+	
+	
+	width:300px;
+	
+	
+	}
