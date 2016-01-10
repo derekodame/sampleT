@@ -1,18 +1,34 @@
 @charset "utf-8";
 /* CSS Document */
+
+#admin{
+	position:absolute;
+	margin:auto;
+	width:1000px;
+	}
 #dropp{
-	
+	width:1500px;
 	position:fixed;
 	top:0px;
+	left:0px;
 	
 	z-index:30px;
 	background-color:white;
+	margin:auto;
+		border-bottom:thin solid green;
+			height:150px
 	}
 	
 #dropp input{
 	
 	width:200px;
-	basckground-color:red;
+	font-size: 18px;
+	
+	color: #0FD70C;
+	
+	border:thin solid green;
+	
+	
 	}
 
 #dropp div{
@@ -20,23 +36,43 @@
 	float:left;
 	width:200px;
 	margin:3px;
+
 	}
 #dropp textarea{
-	lborder:thin solid green;
+	border:thin solid green;
 	float:left;
-	width:238px;
+	width:280px;
 	margin:3px;
+	resize:vertical;
+	
 	}
 #groupp{
 	position:fixed;
 	bottom:26px;
 	left:65px;
 	
-	border:thin solid #A38F8F;
-	background-color:#807676;
+	border:thin solid #191919;
+	background-color:white;
+	color:green;
+	border-radius:5px;
 	
 	
 	}
+
+#groupd{
+	
+	
+	border-right:thin solid #191919;
+	border-left:thin solid #191919;
+	background-color:white;
+	color:green;
+	border-radiusa:5px;
+	padding:0 5px 0 5px;
+	
+	
+	}
+	
+	
 
 #page{
 	
@@ -65,3 +101,31 @@
 	overflow-x:hidden;
 	}
 	
+#x{
+	
+	position:fixed;
+	top:221px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:white;
+	
+	width:50px;
+	cursor:pointer;
+	z-index:70;
+	}
+#xs{
+	
+	position:fixed;
+	bottom:56px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:white;
+	
+	width:50px;
+	cursor:pointer;
+	z-index:50;
+	}

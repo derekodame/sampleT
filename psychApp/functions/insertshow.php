@@ -1,12 +1,13 @@
 <?php
 include"../functions/connection.php";
 include"../functions/error.php";
+include"../functions/drop.php";
 
-$age = $_POST['age'];
-$stage = $_POST['stage'];
-$Symptoms = $_POST['symptoms'];
-$Psychological = $_POST['psychological'];
-$Evidence = $_POST['evidence'];
+$age = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['age'])));
+$stage = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['stage'])));
+$Symptoms = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['symptoms'])));
+$Psychological =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['psychological'])));
+$Evidence =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['evidence'])));
 $Basis = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['basis'])));
 
 
@@ -19,6 +20,9 @@ if($Evidence){
 		
 		echo "all set";
 		$query = mysqli_query($con,"insert into groupp values('id','$age','$stage','$Symptoms','$Psychological','$Evidence','$Basis')");
+		
+		
+	 dropbox($con,$age,$stage,$Symptoms,$Psychological,$Evidence,$Basis);
 		
 		}else echo "basis empty";
 	

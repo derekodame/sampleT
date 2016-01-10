@@ -34,20 +34,20 @@ include"../functions/adminf.php";
 
 <input type="text" id="age"  placeholder="Age" onKeyUp="searche('Age','#age');"><br/>
 
-<div  onClick="results('#ages','#age');" id="ages" style="background-color:black; border-radius:0 0 5px 5px; color:white; cursor:pointer;"></div>
+<div  onClick="results('#ages','#age');" id="ages" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 
 </div>
 
 <div id=""><center>
 Stage of change</center>
 <input onKeyUp="searche('Stage_of_Change','#stage');" type="text" id="stage"  placeholder="stage of change">
-<div  onClick="results('#stages','#stage');" id="stages" style="background-color:black; border-radius:0 0 5px 5px; color:white; cursor:pointer;"></div>
+<div  onClick="results('#stages','#stage');" id="stages" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 </div>
 
 
 <div id="" ><center>Symptoms and Disorders</center>
 <input onKeyUp="searche('Symptoms_and_Disorders','#symptoms');" type="text" id="symptoms"  placeholder="Symptoms and Disorders">
-<div  onClick="results('#symptomss','#symptoms');" id="symptomss" style="background-color:black; border-radius:0 0 5px 5px; color:white; cursor:pointer;"></div>
+<div  onClick="results('#symptomss','#symptoms');" id="symptomss" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 </div>
 
 
@@ -55,18 +55,18 @@ Stage of change</center>
 <div id=""><center>Psychological Treatment</center>
 <input onKeyUp="searche('Psychological_Treatment','#psychological');" type="text" id="psychological"  placeholder="Psychological Treatment">
 
-<div onClick="results('#psychologicals','#psychological');"  id="psychologicals" style="background-color:black; border-radius:0 0 5px 5px; color:white; cursor:pointer;"></div>
+<div onClick="results('#psychologicals','#psychological');"  id="psychologicals" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 </div>
 
 
 
 <div id=""><center>Evidence Level</center>
 <input onKeyUp="searche('Evidence_Level','#evidence');"  type="text" id="evidence" placeholder="Evidence Level" >
-<div  onClick="results('#evidences','#evidence');" id="evidences" style="background-color:black; border-radius:0 0 5px 5px; color:white; cursor:pointer;"></div>
+<div  onClick="results('#evidences','#evidence');" id="evidences" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 </div>
 
 <div id=""><center>Basis for Evidence</center>
-<textarea onKeyUp="searche('Basis_for_Evidence','#basis');" style="height:100px;" type="text" id="basis" placeholder="Basis for Evidence" ></textarea>
+<textarea onKeyUp="searche('Basis_for_Evidence','#basis');" style="height:60px; type="text" id="basis" placeholder="Basis for Evidence" ></textarea>
 
 
 </div>
@@ -85,16 +85,16 @@ Stage of change</center>
 </div><br/><br/><br/><br/><br/><br/><br/><br/>
 <div></div>
 <center><div id='ed' style="" >
-<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:18px; position:fixed; top:0px; right:0px;" value="Insert">
+<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:18px; position:fixed; top:100px; right:60px;" value="Insert">
 
-<span id="s" style="font-size:24px; position:fixed; top:80px; left:670px;";></span></div></center>
+<span id="s" style="font-size:24px; position:fixed; top:80px; right:660px;";></span></div></center>
 <br/><br/>
 
 <center><span id='ii' style="position:fixed; top:113px;  left:600px;font-size:25px;"></span>
 <span id='hidden' style="position:fixed; top:113px;  left:-100px;font-size:25px;">1</span>
 
 
-<button id='prev' style='cursor:pointer; top:200px; position:fixed; left:1px;' >preview </button><button id='nextt' style='cursor:pointer;top:200px; position:fixed; right:1px;' >next</button>
+<button id='prev' style='cursor:pointer; bottom:30px; position:fixed; left:1px;' >preview </button><button id='nextt' style='cursor:pointer;bottom:30px; position:fixed; right:1px;' >next</button>
 
 <span id="page">
 
@@ -102,12 +102,14 @@ Stage of change</center>
 <?php pagination($con);?>
 
 </span>
-
+<span id='left_p'>
+<span id="x">hide</span>
+<span id="xs">show</span>
 <span id="page2">
 
 
 <?php pagination($con);?>
-
+</span>
 </span>
 
 

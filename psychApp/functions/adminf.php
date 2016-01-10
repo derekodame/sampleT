@@ -36,14 +36,18 @@ for($b =1; $b<=$p; $b++){
 	
 	
 	echo "<button id='$b' href='#' onClick='pag($b);'  style=' border-radius:4px; margin:5px; background-color:grey; color:white; padding:0 5px 0  5px; cursor:pointer;'>$b</button>";
-	if($b>=34){
+	if($b>=5){
 		echo"<script type='text/javascript'>
-	document.getElementById('pasge').style.display = 'none';
+	document.getElementById('left_p').style.display = 'none';
 	
 	</script>";
+	}else{
+		echo"<script type='text/javascript'>
+	document.getElementById('left_p').style.display = 'block';
 	
-	
+	</script>";
 		}
+		
 	
 	}
 	

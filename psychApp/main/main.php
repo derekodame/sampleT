@@ -1,4 +1,10 @@
-<?Php include "../functions/header.php";?>
+<?Php include "../functions/header.php";
+
+include"../functions/connection.php";
+include"../functions/error.php";
+include"../functions/drop.php";
+?>
+
 
 
 
@@ -7,36 +13,36 @@
 
 <div id="left_dropdown">
 <select id="sel">
-<option>Age</option>
-<option>Child</option>
-<option>Adolescent</option>
-<option>Adult</option>
+<option style=" display:none;">Age</option>
+
+
+<?php 
+dropshow($con,"Age");
+
+?>
 
 </select>
-<select id="selst">
+<select id="sel2">
 
-<option>Stage of Change</option>
-<option>Precontemplation</option>
-<option>Contemplation</option>
-<option>Preparation</option>
-<option>Action</option>
-<option>Maintenance</option>
+<option style="display:none;">Stage of Change</option>
+<?php 
+dropshow($con,"Stage_of_Change");
+
+?>
 </select>
-<select id="selsy">
-<option>Symptoms & Disorders</option>
-<option>Anorexia</option>
-<option>Anxiety (general symptoms)</option>
-<option>ADHD</option>
-<option>	
-Autism Spectrum (lower functioning)</option>
+<select id="sel3">
+<option style="display:none;">Symptoms and Disorders</option>
+<?php 
+dropshow($con,"Symptoms_and_Disorders");
+
+?>
 
 </select>
-<input id="done_search_s" type="button" onclick="searchh_s();" value="search"/>
+<input id="done_search_s" type="button" onclick="searchh();"  value="search"/>
 </div>
 
 <div id ="search_top">
-<input id="search" type="search"  onKeyUp="searchh();"  placeholder="Search through..."/>
-<input id="done_search" type="button" onclick="searchh();" value="search"/>
+
 
 <div id='ser'>
 
@@ -58,7 +64,7 @@ Autism Spectrum (lower functioning)</option>
 </div><p></p>
 <p></p>
 <p></p><p></p>
-<span  id="successsh"><img   width="425px"  height="425px" src="../pictures/loading.gif"></span>
+<span  id="successsh" style="position:fixed; top:50px; left:10px"><img   width="45px"  height="45px" src="../pictures/loading.gif"><br/>loading...</span>
 </center>
 
 <script type="text/javascript">

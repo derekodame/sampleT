@@ -89,10 +89,12 @@ $('#successsh').hide();
 
 function searchh(){
 $('#successsh').show();
-var sv = $('#search').val();
-var sel = $('#sel').val();
 
-$.get("../functions/searchh.php", {sv:sv,sel:sel},function(data){
+var sel = $('#sel').val();
+var sel2 = $('#sel2').val();
+var sel3 = $('#sel3').val();
+
+$.get("../functions/searchh.php", {sel:sel,sel2:sel2,sel3:sel3},function(data){
 	
 	
 $('#search_result').html(data) 	;

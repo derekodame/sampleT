@@ -30,11 +30,12 @@ function adde(){
 		  $('#evidences').hide();
 		 $('#basiss').hide();
 		 
-		 $("#ii").text('Back to page 1');
+		 $("#ii").html("You are on page "+"<span style='color:red;'>"+1+"</span>");
 		 $("#adminsrp").show();
 		  $("#adminsr").show();
 		  
 		  $('#hidden').text(1);
+		  $("#adminsr").html( $("#adminsr").load("../functions/group.php"));
 		  
 		  
 		
@@ -116,7 +117,8 @@ function pag(v){
 	$.get('../functions/pagination.php', {v:v},function(data){
 	$("#adminsrp").html( data);
 
-$("#ii").html('You are on page '+ v+" ");
+
+$("#ii").html("You are on page <span style='color:red;'> "+ v+"</span> ");
 
 $("#hidden").html( v);
 
@@ -138,7 +140,7 @@ if(v==v){
 	$.get('../functions/pagination.php', {v:v},function(data){
 	$("#adminsrp").html( data);
 
-$("#ii").html('You are on page '+ v+" ");
+$("#ii").html("You are on page <span style='color:red;'> "+ v+"</span> ");
 
 $("#hidden").html( v);
 
@@ -166,7 +168,8 @@ if(v==v){
 	$.get('../functions/pagination.php', {v:v},function(data){
 	$("#adminsrp").html( data);
 
-$("#ii").html('You are on page '+ v+" ");
+
+$("#ii").html("You are on page <span style='color:red;'> "+ v+"</span> ");
 
 $("#hidden").html( v);
 
@@ -180,3 +183,5 @@ $("#hidden").html( v);
 $("#prev").click(function (){
 tprev($("#hidden").text());
 	});
+	
+$("#left_ps").hide();
