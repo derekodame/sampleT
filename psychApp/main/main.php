@@ -12,7 +12,8 @@ include"../functions/drop.php";
 
 
 <div id="left_dropdown">
-<select id="sel">
+<form name="search" id="serach">
+<select name="sel" id="sel" onchange="dis();" >
 <option style=" display:none;">Age</option>
 
 
@@ -22,7 +23,7 @@ dropshow($con,"Age");
 ?>
 
 </select>
-<select id="sel2">
+<select  name="sel2" id="sel2" onchange="dis();">
 
 <option style="display:none;">Stage of Change</option>
 <?php 
@@ -30,7 +31,7 @@ dropshow($con,"Stage_of_Change");
 
 ?>
 </select>
-<select id="sel3">
+<select name="sel3" id="sel3" onchange="dis();">
 <option style="display:none;">Symptoms and Disorders</option>
 <?php 
 dropshow($con,"Symptoms_and_Disorders");
@@ -39,16 +40,11 @@ dropshow($con,"Symptoms_and_Disorders");
 
 </select>
 <input id="done_search_s" type="button" onclick="searchh();"  value="search"/>
+</form>
 </div>
 
-<div id ="search_top">
+<div id ="search_top"></div>
 
-
-<div id='ser'>
-
-</div>
-
-</div>
 
 <!-- search result area-->
 

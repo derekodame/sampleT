@@ -126,12 +126,14 @@ font-size:26px;}
 	fheight:500px;}
 	
 #groupp{
-	position:fixed;
+		position:fixed;
 	bottom:0px;
 	left:65px;
 	
-	border:thin solid #A38F8F;
-	background-color:#807676;
+	border:thin solid #191919;
+	background-color:white;
+	color:green;
+	border-radius:5px;
 	
 	
 	}
@@ -295,4 +297,25 @@ margin:1px;
 	width:300px;
 	
 	
+	}
+#groupf tr td{
+	border:thin solid green;
+	border-radius:3px;
+	margin:px;
+	
+	
+	}
+#groupd tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+#groupp tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
 	}

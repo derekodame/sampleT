@@ -7,18 +7,17 @@ $emailss = $_SESSION['email'];
 
 
 $dbid=$_POST['deletee'];
-$table=$_POST[''];
 
 
-$query = mysqli_query($con,"select * from test where id = $dbid");
+$query = mysqli_query($con,"select * from groupp where id = $dbid");
 $num = mysqli_num_rows($query);
 
 if($num ==1){
 	$row = mysqli_fetch_array($query);
 	$n = $row['a'];
-	
-unlink("../file/$n");
-mysqli_query($con,"DELETE FROM $table WHERE id = '$dbid'");
+
+mysqli_query($con,"DELETE FROM groupp WHERE id = '$dbid' ");
+
 }
 
 ?>

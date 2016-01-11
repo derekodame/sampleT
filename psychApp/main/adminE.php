@@ -32,7 +32,7 @@ include"../functions/adminf.php";
 <div>
 <center>Age</center>
 
-<input type="text" id="age"  placeholder="Age" onKeyUp="searche('Age','#age');"><br/>
+<input  type="text" id="age"  placeholder="Age" onKeyUp="searche('Age','#age');"><br/>
 
 <div  onClick="results('#ages','#age');" id="ages" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:pointer; z-index:27;"></div>
 
@@ -94,7 +94,10 @@ Stage of change</center>
 <span id='hidden' style="position:fixed; top:113px;  left:-100px;font-size:25px;">1</span>
 
 
-<button id='prev' style='cursor:pointer; bottom:30px; position:fixed; left:1px;' >preview </button><button id='nextt' style='cursor:pointer;bottom:30px; position:fixed; right:1px;' >next</button>
+<input type='button' id='prev' style='cursor:pointer; bottom:30px; position:fixed; left:1px; font-size:24px;
+	 border-radius:5px; background-color:#1E5B1E; color:white;'  value='<<'>
+<input type='button' id='nextt' style='cursor:pointer;bottom:30px; position:fixed; right:1px; font-size:24px;
+	 border-radius:5px; background-color:#1E5B1E; color:white;' value='>>' >
 
 <span id="page">
 

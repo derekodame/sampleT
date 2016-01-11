@@ -12,7 +12,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','$a','1','1','1','1','1')");
 			
-		}else { echo " a";}
+		}
 		
 		///---------
 		
@@ -23,7 +23,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','1','$s','1','1','1','1')");
 			
-		}else { echo " s";}
+		}
 		
 		///---------
 		
@@ -34,8 +34,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','1','1','$d','1','1','1')");
 			
-		}else { echo " d";}
-
+		}
 
 ///---------
 		
@@ -46,8 +45,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','1','1','1','$g','1','1')");
 			
-		}else { echo " g";}
-
+		}
 	
 	
 		///---------
@@ -59,8 +57,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','1','1','1','1','$hh','1')");
 			
-		}else{ echo "h";}
-		
+		}
 		///---------
 		
 		$queryd = mysqli_query($con,"select * from dropbox where Basis_for_Evidence = '$jj'");
@@ -70,7 +67,7 @@ function dropbox($con,$a,$s,$d,$g,$hh,$jj='j'){
 		if($num<1){
 			$queryd = mysqli_query($con,"insert into dropbox values('id','1','1','1','1','1','$jj')");
 			
-		}else { echo " j";}
+		}
 	}
 	
 function dropshow($con,$su){

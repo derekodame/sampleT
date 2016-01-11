@@ -43,13 +43,12 @@
 	float:left;
 	width:280px;
 	margin:3px;
-	resize:vertical;
 	
-	}
+	resize:none;}
 #groupp{
 	position:fixed;
 	bottom:26px;
-	left:65px;
+	left:57px;
 	
 	border:thin solid #191919;
 	background-color:white;
@@ -59,18 +58,7 @@
 	
 	}
 
-#groupd{
-	
-	
-	border-right:thin solid #191919;
-	border-left:thin solid #191919;
-	background-color:white;
-	color:green;
-	border-radiusa:5px;
-	padding:0 5px 0 5px;
-	
-	
-	}
+
 	
 	
 
@@ -82,7 +70,7 @@
 	
 	
 	border:thin solid #A38F8F;
-	background-color:white;
+	background-color:#1E5B1E;
 	width:100%;
 	height:25px;
 	}
@@ -128,4 +116,33 @@
 	width:50px;
 	cursor:pointer;
 	z-index:50;
+	}
+#groupf tr td{
+	border:thin solid green;
+	border-radius:3px;
+	margin:px;
+	
+	
+	}
+	#groupd tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+#groupp tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+ #xx{
+	
+
+	color:red;
+	background-color: white;
+	cursor:pointer;
+	
 	}
