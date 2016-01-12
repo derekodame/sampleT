@@ -1,23 +1,11 @@
 // JavaScript Document
 
+// for id
 function _(id){
 	return document.getElementById(id);
 	}
 
-$('#age').click(function(){
-	var v = $('#age').text();
-	
-	});
 
-$('#SympDisorder').click(function(){
-	var v = $('#SympDisorder').text();
-	
-	});
-
-$('#stage_of_change').click(function(){
-	var  v = $('#stage_of_change').text();
-	
-	});
 	
 //logout keytype----------
 
@@ -86,6 +74,8 @@ window.addEventListener("scroll",Scroll);
 	
 
 $('#successsh').hide();
+
+// search function ----
 
 function searchh(){
 $('#successsh').show();

@@ -95,11 +95,11 @@ Stage of change</center>
 
 
 <input type='button' id='prev' style='cursor:pointer; bottom:30px; position:fixed; left:1px; font-size:24px;
-	 border-radius:5px; background-color:#1E5B1E; color:white;'  value='<<'>
-<input type='button' id='nextt' style='cursor:pointer;bottom:30px; position:fixed; right:1px; font-size:24px;
+	 border-radius:5px; background-color:#1E5B1E; color:white;'  value='<<'  onclick='tp();' >
+<input type='button' id='nextt' onclick='tn();' style='cursor:pointer;bottom:30px; position:fixed; right:1px; font-size:24px;
 	 border-radius:5px; background-color:#1E5B1E; color:white;' value='>>' >
 
-<span id="page">
+<span id="page"  >
 
 
 <?php pagination($con);?>
@@ -107,7 +107,7 @@ Stage of change</center>
 </span>
 <span id='left_p'>
 <span id="x">hide</span>
-<span id="xs">show</span>
+<span id="xs">Page No.</span>
 <span id="page2">
 
 

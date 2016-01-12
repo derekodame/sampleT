@@ -39,9 +39,9 @@ if($emailad){
 <div id="left_admin">
 <div id="clientAmind">client</div>
 <div id="uploadAmind">upload</div>
-<div id="dropdown_box">dropdown box</div>
-<div id="">grouping</div>
-<div > suggested treatments</div>
+
+<a style="text-decoration:none;" href="adminE.php" ><div id="">grouping</div></a>
+
 
 </div>
 
@@ -70,20 +70,7 @@ if($emailad){
 </div>
 
 
-<div id="drop">
 
-for drop
-
-<form enctype="multipart/form-data" method="post">
-<select>
-<option>Age</option>
-<option>Stage of change</option>
-<option>Symptoms and Disorders</option>
-</select><br/>
-<input type="text"  placeholder="Psychological Treatment"><input type="text" placeholder="Evidence Level" ><input type="text" placeholder="" >
-<input type="button"  value="add">
-</form>
-</div>
 </div>
 
 <?php 

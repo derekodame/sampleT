@@ -78,7 +78,7 @@
 #page2{
 	
 	position:fixed;
-	bottom:77px;
+	bottom:82px;
 	left:0px;
 	
 	
@@ -92,7 +92,7 @@
 #x{
 	
 	position:fixed;
-	top:221px;
+	bottom:63px;
 	left:0px;
 	
 	
@@ -106,14 +106,14 @@
 #xs{
 	
 	position:fixed;
-	bottom:56px;
+	bottom:63px;
 	left:0px;
 	
 	
 	border:thin solid #A38F8F;
 	background-color:white;
 	
-	width:50px;
+	width:80px;
 	cursor:pointer;
 	z-index:50;
 	}

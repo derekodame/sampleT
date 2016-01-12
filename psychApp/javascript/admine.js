@@ -19,12 +19,12 @@ function adde(){
 				$("#s").html(data);
 				$("#s").show();
 			//clear
-			$('#age').val("");
+			/*$('#age').val("");
 		 $('#stage').val("");
 		$('#symptoms').val("");
 		 $('#psychological').val("");
 		  $('#evidence').val("");
-		 $('#basis').val("");
+		 $('#basis').val("");*/
 		 		//hide
 		$('#ages').hide();
 		 $('#stages').hide();
@@ -140,7 +140,7 @@ $("#hidden").html( v);
 	
 	}
 }
-
+//next click
 $("#nextt").click(function (){
 tnext($("#hidden").text());
 	});
@@ -172,6 +172,10 @@ $("#hidden").html( v);
 }
 }
 
+//prev click
+$("#prev").click(function (){
+tprev($("#hidden").text());
+	});
 
 function dele(d){
 		var v = $('#hidden').text();
@@ -196,8 +200,20 @@ function dele(d){
 }
 	
 
-$("#prev").click(function (){
-tprev($("#hidden").text());
+$('#xs').hide();
+$('#x').click(function (){
+	$('#x').hide();
+	$('#xs').show();
+	$('#page2').hide();
+	$('#nextt').show();
 	});
+
+$('#xs').click(function (){
+	$('#xs').hide();
+	$('#x').show();
+	$('#page2').show();
+	$('#nextt').hide();
+	});
+
 	
 $("#left_ps").hide();

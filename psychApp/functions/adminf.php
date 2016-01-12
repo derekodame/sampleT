@@ -1,3 +1,5 @@
+
+<script type="text/javascript" src="../javascript/jquery-1.11.3.min.js"></script>
 <?php 
 include("connection.php");
 
@@ -28,23 +30,76 @@ function pagination($con){
 $num =mysqli_num_rows($queryt);
 $div = ($num/25);
 $p= ceil($div);
-echo "";
+$pp= ceil($div)-1;
 
 
+//javascript for next/preview
+echo"<script type='text/javascript'>
+	function tn(){
+	var o =$('#hidden').text();
+	
+	if(o>=$pp){
+		$('#nextt').hide(); 
+			//document.getElementById('nextt').disabled=true;
+		}}
+
+function tp(){
+	var o =$('#hidden').text();
+	
+	if(o<=$p){
+		$('#nextt').show();
+//document.getElementById('nextt').disabled=false;
+		}
+	
+	
+	
+	}
+
+</script>";
+
+//pagination	
 for($b =1; $b<=$p; $b++){
 	
+
 	
+	echo "<button id='$b' href='$cc'  onClick='pag($b);'  style=' border-radius:4px; margin:5px; background-color:white; color:#1E5B1E; padding:0 5px 0  5px; cursor:pointer;'>$b</button>";
 	
-	echo "<button id='$b' href='#' onClick='pag($b);'  style=' border-radius:4px; margin:5px; background-color:white; color:#1E5B1E; padding:0 5px 0  5px; cursor:pointer;'>$b</button>";
-	if($b>=5){
+ $pd = $p+1;
+	echo"<script type='text/javascript'>
+	
+	$('#'+$b).click(function(){
+		var cc =$('#'+$b).text();
+		
+		
+		if($b==$p||$b==$pd){
+		$('#nextt').hide();
+		}else {
+			$('#nextt').show();
+		}
+		 
+			
+		});
+		
+		$('#page2').click(function(){
+		
+		$('#nextt').hide();
+		
+		 });
+		
+		
+	</script>";
+	
+	//page2 display
+	if($p>31){
 		echo"<script type='text/javascript'>
-	document.getElementById('left_p').style.display = 'none';
-	
+	document.getElementById('left_p').style.display = 'block';
+
+
 	</script>";
 	}else{
 		echo"<script type='text/javascript'>
-	document.getElementById('left_p').style.display = 'block';
-	
+	document.getElementById('left_p').style.display = 'none';
+		//document.getElementById('nextt').style.display = 'none';
 	</script>";
 		}
 		
