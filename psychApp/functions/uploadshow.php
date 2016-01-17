@@ -10,7 +10,7 @@ $emailss = $_SESSION['email'];
 
 $query = mysqli_query($con, "select * from test order by id DESC");
 
-echo "<table id='uptablee'   ><tr ><td><center>Name given</center></td><td><center>Actual name</center></td></tr></table>";
+echo "<table id='uptablee'   ><tr ><td><center>Update Dates</center></td><td><center>Actual name</center></td></tr></table>";
 while($row=mysqli_fetch_array($query)){
 	
 	$a =ucfirst( $row['a']);

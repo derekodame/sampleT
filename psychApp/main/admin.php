@@ -56,12 +56,11 @@ if($emailad){
 
 
 <div id="upload">
-<center><input  id="sexcel" type="search" style=" border-radius:5px; width:670px; font-size:24px; background-color:green; color:white;"  placeholder="search through excel"name="sexcel"> </center><br/>
+
 <span id="success"></span><span  id="successs"><img   width="15px"  height="15px"src="../pictures/loading.gif"></span><br/>
 
 <fsorm method="post"  enctype="multipart/form-data">
-<input type="file" name="excel" id="excel"   multiple /> 
-<input type="text" required name="aa"  id="aa" placeholder="name of file"  /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="submit"/> 
+<input type="file" name="excel" id="excel"   multiple /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="submit"/> 
 
 
 </form>

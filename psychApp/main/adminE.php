@@ -4,7 +4,8 @@ include"../functions/error.php";
 include"../functions/adminf.php";
 
 
-?><!doctype html>
+?>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">

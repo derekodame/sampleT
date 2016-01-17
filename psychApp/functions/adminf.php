@@ -3,7 +3,6 @@
 <?php 
 include("connection.php");
 
-
 function clientAll($con){
 $query = mysqli_query($con,"SELECT * FROM client order by date DESC");
 echo "<table id='clientall' class='t'> <tr><td><center>id</center></td> <td><center>first</center></td><td><center>last</center></td><td><center>email</center></td><td><center>date  </center></td></tr></table>";

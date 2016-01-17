@@ -1,4 +1,5 @@
-// JavaScript Document
+
+
 $("#adminsr").load("../functions/group.php");
 
 
@@ -24,7 +25,8 @@ function adde(){
 		$('#symptoms').val("");
 		 $('#psychological').val("");
 		  $('#evidence').val("");
-		 $('#basis').val("");*/
+		  */
+		 $('#basis').val("");
 		 		//hide
 		$('#ages').hide();
 		 $('#stages').hide();
@@ -172,21 +174,29 @@ $("#hidden").html( v);
 }
 }
 
+
+    /* String url ="http://stecks.bugs3.com";
+        WebView vw = (WebView) this.findViewById(R.id.webView);
+        vw.getSettings().setJavaScriptEnabled(true);
+        vw.loadUrl(url);
+*/
+
 //prev click
 $("#prev").click(function (){
 tprev($("#hidden").text());
 	});
 
+//delete
 function dele(d){
 		var v = $('#hidden').text();
 		
-		
-				$.post('../functions/deleteadmine.php', {deletee:d},function(data){
+		$.post('../functions/deleteadmine.php', {deletee:d},function(data){
 			
-			$("#adminsr").hide();
+	$("#adminsr").hide();
 	$("#adminsrp").show();
 	$("#ii").show();
 	$("#s").hide();
+	
 	$.get('../functions/pagination.php', {v:v},function(data){
 	$("#adminsrp").html( data);
 	$("#ii").html("You are on page <span style='color:red;'> "+ v+"</span> ");
@@ -198,7 +208,17 @@ function dele(d){
 				});
 		
 }
+
+//updating----
+function up(id,vv,n){
 	
+var val = $('#' + vv).text();
+
+$.post('../functions/updatee.php', {id:id,val:val,n:n},function(data){
+			});
+		
+}
+		
 
 $('#xs').hide();
 $('#x').click(function (){
@@ -217,3 +237,5 @@ $('#xs').click(function (){
 
 	
 $("#left_ps").hide();
+
+

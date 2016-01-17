@@ -172,45 +172,11 @@ while($row=mysqli_fetch_array($query)){
 </li>
 
 <li >
-  <select class="input"  title="Color Session"style="color:<?php echo $bg;?>;background-color:white;" name="sessioncolor" id="s"   onChangeee="this.form.submit()" ?> >
-    <option> 
-      <?php 
-  $db->color($emailss,'sessioncolor');
 
-   ?>
-      </option>
-    <option style="background-color:rgba(0, 153, 204, 0.8); color:white;">Default</option>
-    <option style="background-color:GoldenRod; color:white;" title="GoldenRod">GoldenRod </option>
-    <option style="background-color:yellow; color:white;" title="yellow">yellow</option>
-    <option style="background-color:red; color:white;" title="red">red</option>
-    <option style="background-color:blue; color:white;" title="blue">blue </option>
-    <option style="background-color:Khaki; color:white;" title="Khaki">Khaki</option>
-    <option style="background-color:LightCoral; color:white;" title="LightCoral">LightCoral </option>
-    <option style="background-color:Maroon; color:white;" title="Maroon">Maroon</option>
-    <option style="background-color:MediumSeaGreen; color:white;" title="MediumSeaGreen">MediumSeaGreen</option>
-    <option style="background-color:Moccasin; color:white;" title="Moccasin">Moccasin</option>
-    <option style="background-color:Olive; color:white;" title="Olive">Olive</option>
-    <option style="background-color:Orchid; color:white;" title="Orchid">Orchid </option>
-    <option style="background-color:OrangeRed; color:white;" title="OrangeRed">OrangeRed</option>
-    <option style="background-color:Peru; color:white;" title="Peru">Peru</option>
-    <option style="background-color:Salmon; color:white;" title="Salmon">Salmon</option>
-    <option style="background-color:Silver; color:white;" title="Silver">Silver </option>
-    <option style="background-color:YellowGreen; color:white;" title="YellowGreen">YellowGreen </option>
-    <option style="background-color:purple; color:white;" title="purple">purple</option>
-    <option style="background-color:grey; color:white;" title="grey">grey</option>
-    <option style="background-color:green; color:white;" title="green">green</option>
-    <option style="background-color:pink; color:white;" title="pink">pink</option>
-    <option style="background-color:brown; color:white;" title="brown">brown</option>
-    <?php 
-
-
-$i=100;
-for($i; $i<=999; $i+=1){
-	echo "<option style=\"background-color:#$i; color:white;\" title=\"#$i\"><span  >#$i</span></option>";
-	}
-
-?>
-  </select>
+  color <input type="color" name="sessioncolor"   value="<?php echo $db->color("itserve1",$emailss); ?>">
+  <?php 
+  $db->color($emailss,'sessioncolor')
+  ?>
 </li>
 <li ></li>
 </ul>
@@ -226,7 +192,7 @@ for($i; $i<=999; $i+=1){
 <li >
   
   
-  <input class="inputb"  //onclick="window.location.reload()"  name="done"  type="submit" id="done" tabindex="8" value="Done">
+ <input class="inputb"  //onclick="window.location.reload()"  name="done"  type="submit" id="done" tabindex="8" value="Done">
 </li>
 </ul>
 </form>

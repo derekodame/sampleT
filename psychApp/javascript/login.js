@@ -16,3 +16,7 @@ $('#ilogin').prop("disabled",true);
 });
 	*/	 
 
+function copyy(){
+	var s =$('#email').val();
+	alert(s);
+	}

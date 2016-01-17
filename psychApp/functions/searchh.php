@@ -15,7 +15,7 @@ $sel3 =  mysqli_real_escape_string($con,trim($_GET['sel3']));
 
 
 
-$query = "select * from groupp  where (Age = '$sel') and (Stage_of_Change = '$sel2') and (Symptoms_and_Disorders= '$sel3') order by id DESC  ";
+$query = "select * from groupp  where (Age = '$sel') and (Stage_of_Change = '$sel2') and (Symptoms_and_Disorders= '$sel3') order by  Psychological_Treatment  ";
 	 
 	  $query = mysqli_query($con,$query);
 	$numrows = mysqli_num_rows($query);

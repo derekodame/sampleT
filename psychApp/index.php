@@ -27,15 +27,15 @@
 </div>
 <p></p>
 
-<div id="reg">
+<div id="reg" >
 <center> <?php echo $applyR; ?></center><br/>
 <form action="" method="post">
 <input name ="first" id ="first"type="text"  placeholder="firstname" required value="<?php echo $_POST['first'];?>">
 <input name ="last" id = "last" type="text"  placeholder="lastname" required value="<?php echo $_POST['last'];?>"><br/>
-<input  name ="email" id ="email" type="email" placeholder="email"  required value="<?php echo $_POST['email'];?>"><br/>
+<input oncopy="copy()" name ="email" id ="email" type="email" placeholder="email"  required value="<?php echo $_POST['email'];?>"><br/>
 
 <input name ="password" id="password" type="password" placeholder="password" required value="<?php echo $_POST['password'];?>"><br/>
-<input name ="conpass" id="conpass" type="password" placeholder="confirm password" required value="<?php echo $_POST['conpass'];?>"><br/>
+<input  name ="conpass" id="conpass" type="password" placeholder="confirm password" required value="<?php echo $_POST['conpass'];?>"><br/>
 <input name ="reset" id="reset" type="button" value="Reset">
 <input name ="regdone" id="regdone" type="submit" value="Done">
 </form>

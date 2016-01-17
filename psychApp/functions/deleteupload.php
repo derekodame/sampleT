@@ -18,7 +18,7 @@ if($num ==1){
 	$n = $row['a'];
 	
 unlink("../file/$n");
-mysqli_query($con,"DELETE FROM $table WHERE id = '$dbid'");
+mysqli_query($con,"DELETE FROM test WHERE id = '$dbid'");
 }
 
 ?>

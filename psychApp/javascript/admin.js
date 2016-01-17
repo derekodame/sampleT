@@ -67,11 +67,14 @@ function del(d){
 	
 	function uploadfile(e){
 	var file = _("excel").files[0];
-	var namedfile = _('aa').value;
+	//var namedfile = _('aa').value;
+
+	
+
 	
 	var formdata = new FormData();
 	formdata.append("excel", file);
-	formdata.append("aa", namedfile);
+	//formdata.append("aa", namedfile);
 	
 	
 	var ajax = new XMLHttpRequest();
@@ -87,7 +90,7 @@ function del(d){
   };
 	
 	
-	ajax.open("POST", "../functions/excel.php",true);
+	ajax.open("POST", "../functions/exceltobase.php",true);
 	ajax.send(formdata);
 }
 	
