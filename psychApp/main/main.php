@@ -13,7 +13,7 @@ include"../functions/drop.php";
 
 <div id="left_dropdown">
 <form name="search" id="serach">
-<select name="sel" id="sel" onchange="dis();" >
+<select name="sel" id="sel" onchange="displaye();" >
 <option style=" display:none;">Age</option>
 
 
@@ -23,7 +23,7 @@ dropshow($con,"Age");
 ?>
 
 </select>
-<select  name="sel2" id="sel2" onchange="dis();">
+<select  name="sel2" id="sel2" onchange="displaye();">
 
 <option style="display:none;">Stage of Change</option>
 <?php 
@@ -31,7 +31,7 @@ dropshow($con,"Stage_of_Change");
 
 ?>
 </select>
-<select name="sel3" id="sel3" onchange="dis();">
+<select name="sel3" id="sel3" onchange="displaye();">
 <option style="display:none;">Symptoms and Disorders</option>
 <?php 
 dropshow($con,"Symptoms_and_Disorders");

@@ -36,11 +36,11 @@ function adde(){
 		 $('#basiss').hide();
 		 
 		 $("#ii").html("You are on page "+"<span style='color:red;'>"+1+"</span>");
-		 $("#adminsrp").show();
+		 $("#adminsrp").hide();
 		  $("#adminsr").show();
 		  
 		  $('#hidden').text(1);
-		  $("#adminsr").html( $("#adminsr").load("../functions/group.php"));
+		  $("#adminsr").load("../functions/group.php");
 		  
 		  
 		
@@ -48,7 +48,7 @@ function adde(){
 				});
 }
 
-//small serach 
+//small serach get
 function searche(id,value){
 	var val = $(value).val();
 	$.get('../functions/admines.php', {val:val,id:id},function(data){
@@ -74,7 +74,6 @@ var groupp = document.getElementById('groupp');
 var ypos = window.pageYOffset;
 if(ypos > 100) {
 	//top.style.opacity = "0";
-	
 	top.style.top = "0";
 	top.style.position ="fixed";
 	top.style.zIndex="5";
@@ -83,13 +82,7 @@ if(ypos > 100) {
 	lefttop.style.position ="fixed";
 	lefttop.style.zIndex="5";
 	lefttop.style.backgroundColor="white";
-
-	
-	$('#groupp').show();
-
-	
-	
-
+$('#groupp').show();
 }
 else{
 top.style.top = "";
@@ -97,8 +90,6 @@ top.style.top = "";
 	lefttop.style.top = "";
 	lefttop.style.position ="";
 	$('#groupp').hide();
-	
-	
 	}
 }
 window.addEventListener("scroll",Scroll);
@@ -181,14 +172,33 @@ $("#hidden").html( v);
         vw.loadUrl(url);
 */
 
+
 //prev click
 $("#prev").click(function (){
 tprev($("#hidden").text());
 	});
 
-//delete
-function dele(d){
+//delete for group
+function deleg(d){
 		var v = $('#hidden').text();
+		$('.'+d).hide('slow')
+		
+		$.post('../functions/deleteadmine.php', {deletee:d},function(data){
+			
+	$("#adminsr").show();
+	$("#adminsrp").hide();
+	$("#ii").show();
+	$("#s").hide();
+	
+	
+			
+				});
+		
+}
+//delete for pagination
+function delep(d){
+		var v = $('#hidden').text();
+		$('.'+d).hide('slow');
 		
 		$.post('../functions/deleteadmine.php', {deletee:d},function(data){
 			
@@ -197,20 +207,16 @@ function dele(d){
 	$("#ii").show();
 	$("#s").hide();
 	
-	$.get('../functions/pagination.php', {v:v},function(data){
-	$("#adminsrp").html( data);
-	$("#ii").html("You are on page <span style='color:red;'> "+ v+"</span> ");
-	$("#hidden").html( v);
-
-
-			});
+	
 			
 				});
 		
 }
 
+
 //updating----
 function up(id,vv,n){
+	
 	
 var val = $('#' + vv).text();
 
@@ -220,6 +226,8 @@ $.post('../functions/updatee.php', {id:id,val:val,n:n},function(data){
 }
 		
 
+
+// hiding/shoig page no(s). 
 $('#xs').hide();
 $('#x').click(function (){
 	$('#x').hide();

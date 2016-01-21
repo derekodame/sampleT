@@ -18,18 +18,6 @@ include"../functions/adminf.php";
 <div id="admin">
 
 <div id="dropp">
-
-
-
-
-
-
-
-
-
-
-
-
 <div>
 <center>Age</center>
 
@@ -67,9 +55,10 @@ Stage of change</center>
 </div>
 
 <div id=""><center>Basis for Evidence</center>
-<textarea onKeyUp="searche('Basis_for_Evidence','#basis');" style="height:60px; type="text" id="basis" placeholder="Basis for Evidence" ></textarea>
+<textarea onKeyUp="searche('Basis_for_Evidence','#basis');" style="height:60px;" type="text" id="basis" placeholder="Basis for Evidence" ></textarea>
 
-
+<span id="adde" onClick="adde();" style="cursor:pointer; font-size:18px;  z-index:100px;color:white; background-color:green; border-radius:4px; padding:1px; float:right; " >Insert</span><br/>
+<span id="s" style="font-size:15px; float:right; ";><span style="color:white;">1</span></span>
 </div>
 
 
@@ -85,10 +74,10 @@ Stage of change</center>
 
 </div><br/><br/><br/><br/><br/><br/><br/><br/>
 <div></div>
-<center><div id='ed' style="" >
-<input type="button" id="adde" onClick="adde();" style="cursor:pointer; font-size:18px; position:fixed; top:100px; right:60px;" value="Insert">
+<div id='ed' style="width:1999px; position:fixed;  top:100px; right:60px; " >
 
-<span id="s" style="font-size:24px; position:fixed; top:80px; right:660px;";></span></div></center>
+
+</div>
 <br/><br/>
 
 <center><span id='ii' style="position:fixed; top:113px;  left:600px;font-size:25px;"></span>

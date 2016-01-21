@@ -10,6 +10,7 @@ $Psychological =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['ps
 $Evidence =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['evidence'])));
 $Basis = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['basis'])));
 
+$empty= "Input all fields or put N/A";
 
 if($age){
 if($stage){
@@ -18,24 +19,50 @@ if($Psychological){
 if($Evidence){
 	if($Basis){
 		
-		echo "all set";
-		$query = mysqli_query($con,"insert into groupp values('id','$age','$stage','$Symptoms','$Psychological','$Evidence','$Basis')");
 		
+//ranking order
+
+switch ($Evidence) {
+    case "Good":
+        $rank = 4 ;
+        break;
+    case "Fair":
+        $rank = 3 ;
+        break;
+    case "Excellent":
+        $rank = 5 ;
+        break;
+	case "Unclear":
+        $rank = 1;
+        break;
+	case "Experimental":
+        $rank = 2;
+        break;
+   default:
+   $rank = "will be ranked ";
+      
+}
+		
+		$query = mysqli_query($con,"insert into groupp values('id','$age','$stage','$Symptoms','$Psychological','$Evidence','$Basis','$rank')");
+		
+	 if ($query === false) {
+    die('Invalid query: ' . mysql_error());
+}else echo "Inserted successfully :)";
 		
 	 dropbox($con,$age,$stage,$Symptoms,$Psychological,$Evidence,$Basis);
 		
-		}else echo "basis empty";
+		}else echo $empty;
 	
 	
-	}else echo "evidenceempty empty or put N/a";
+	}else  echo $empty;
 	
-	}else echo "psychological empty or put N/a";
+	}else  echo $empty;
 	
-	}else echo "symptoms empty or put N/a";
+	}else  echo $empty ;
 	
-	}else echo "stage empty or put N/a";
+	}else echo $empty;
 	
-	}else echo "age empty or put N/a";
+	}else echo $empty;
 
 
 

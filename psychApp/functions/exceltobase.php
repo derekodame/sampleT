@@ -72,21 +72,61 @@ for ($row = 1; $row <= $highestRow; ++$row) {
   for ($col = 0; $col <= $highestColumnIndex; ++$col) {
     $rows[$col] = mysqli_real_escape_string($con,$objWorksheet->getCellByColumnAndRow($col, $row)->getValue());
   }
-
-if($rows[0]=='Age'){
+ 
+ //header to *****
+if($rows[0]=='Age' OR $rows[1]=='Stage of Change' OR $rows[2]=='Symptoms and Disorders' OR $rows[3]=='Psychological Treatment' OR $rows[4]=='Evidence Level Basis' OR $rows[5]=='Basis for Evidence' ){
 	$rows[0]='****';
-	}else $rows[0];
+	$rows[1]='****';
+	$rows[2]='****';
+	$rows[3]='****';
+	$rows[4]='****';
+	$rows[5]='****';
+	}else {
+		$rows[0];
+		$rows[1];
+		$rows[2];
+		$rows[3];
+		$rows[4];
+		$rows[5];
+	}
  		
-		
-	$query =mysqli_query($con,"select * from groupp where (age = '$rows[0]') and (Stage_of_Change = '$rows[1]')  and (Symptoms_and_Disorders = '$rows[2]')  and (Psychological_Treatment = '$rows[3]')  and (Evidence_Level = '$rows[4]') and (Basis_for_Evidence = '$rows[5]')");
+
+
+$query =mysqli_query($con,"select * from groupp where (age = '$rows[0]') and (Stage_of_Change = '$rows[1]')  and (Symptoms_and_Disorders = '$rows[2]')  and (Psychological_Treatment = '$rows[3]')  and (Evidence_Level = '$rows[4]') and (Basis_for_Evidence = '$rows[5]')");
 		$mum =mysqli_num_rows($query);
 
+dropbox($con,$rows[0],$rows[1],$rows[2],$rows[3],$rows[4],$rows[5]);
+	
+//ranking order
 
-			
+switch ($rows[4]) {
+    case "Good":
+        $rank = 4 ;
+        break;
+    case "Fair":
+        $rank = 3 ;
+        break;
+    case "Excellent":
+        $rank = 5 ;
+        break;
+	case "Unclear":
+        $rank = 1;
+        break;
+	case "Experimental":
+        $rank = 2;
+        break;
+   default:
+   $rank = "will be ranked ";
+      
+}
+
+
+
+		
 		if($mum==0){	
 		
-		$result = mysqli_query($con,"insert into groupp values('id','$rows[0]','$rows[1]','$rows[2]','$rows[3]','$rows[4]','$rows[5]')");
-		dropbox($con,$rows[0],$rows[1],$rows[2],$rows[3],$rows[4],$rows[5]);
+		$result = mysqli_query($con,"insert into groupp values('id','$rows[0]','$rows[1]','$rows[2]','$rows[3]','$rows[4]','$rows[5]','$rank')");
+	
 		
 		
 		 
@@ -97,7 +137,7 @@ if($rows[0]=='Age'){
 }
 }
 
-echo " Data was insected successfully :)";
+echo " Data was inserted successfully :)";
 echo $already;
 }else echo "Only accepts excel file with the extesion of 'xlxs'";
 

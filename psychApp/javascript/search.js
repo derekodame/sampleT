@@ -1,5 +1,25 @@
 // JavaScript Document
 
+document.getElementById('done_search_s').disabled=true;
+document.getElementById('done_search_s').style.backgroundColor='grey';
+document.getElementById('done_search_s').style.color='white';
+document.getElementById('done_search_s').style.cursor='none';
+
+function displaye(){
+	var f = $('#sel');
+	var f2 = $('#sel2');
+	var f3 = $('#sel3');
+	var b = document.getElementById('done_search_s');
+	if(f.val()!='Age' && f2.val()!='Stage of Change' && f3.val()!='Symptoms and Disorders'){
+b.disabled=false;
+document.getElementById('done_search_s').style.backgroundColor='green';
+document.getElementById('done_search_s').style.color='white';
+document.getElementById('done_search_s').style.cursor='pointer';
+		}else { b.disabled=true;}
+	
+	}
+
+
 // for id
 function _(id){
 	return document.getElementById(id);
@@ -70,6 +90,10 @@ top.style.top = "";
 }
 window.addEventListener("scroll",Scroll);
 	
+//---
+
+
+
 ///-------------
 	
 
@@ -78,6 +102,8 @@ $('#successsh').hide();
 // search function ----
 
 function searchh(){
+	
+
 $('#successsh').show();
 
 var sel = $('#sel').val();

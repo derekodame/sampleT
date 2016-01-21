@@ -57,10 +57,10 @@ if($emailad){
 
 <div id="upload">
 
-<span id="success"></span><span  id="successs"><img   width="15px"  height="15px"src="../pictures/loading.gif"></span><br/>
+<span id="success"></span><br/>
 
 <fsorm method="post"  enctype="multipart/form-data">
-<input type="file" name="excel" id="excel"   multiple /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="submit"/> 
+<input type="file" name="excel" id="excel"   multiple /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="submit"/> <span  id="successs">loading...<img   width="15px"  height="15px"src="../pictures/loading.gif"></span>
 
 
 </form>
@@ -72,22 +72,14 @@ if($emailad){
 
 </div>
 
-<?php 
-
-
-?>
-
-<div>
-<iframe id="frame" width="100%" height="100%"   src="../pictures/2.txt">myDocument</iframe>
-
-
-
-</div>
 
 
 
 
-<div></div>
+
+
+
+
 
 </div>
 
