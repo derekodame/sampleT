@@ -1,22 +1,135 @@
 @charset "utf-8";
 /* CSS Document */
 
+body{
+background-image:url(../pictures/u.jpg);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:cover  ;
+	height:;
+	position:relative;
+	
+	}
+
+	
+#searchee select{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: black;
+	width:240px;
+	border: thin  dotted  green;
+	
+	mmargin:5px
+	
+	
+}
+#searchee option{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: #0FD70C;
+	width:300px;
+	border:thin solid green;
+	
+	margin:5px
+	
+	
+}
+
+body:active{
+ccolor:red;   
+}
+
+#groupf div:focus{
+	background-color:#E9E5E5;
+	
+	}
+	
+#page2 button{
+	background-color:white;
+	 border-radius:4px; 
+	 margin:5px;  
+	 color:#1E5B1E; 
+	 padding:0 5px 0  5px; 
+	 cursor:pointer;
+	}
+#page button{
+	background-color:white;
+	 border-radius:4px; 
+	 margin:5px;  
+	 color:#1E5B1E; 
+	 padding:0 5px 0  5px; 
+	 cursor:pointer;
+	}
+#page2 button:focus{
+background-color:green;
+color:white;
+border-color:white;
+}
+
+#page button:focus{
+background-color:green;
+color:white;
+border-color:white;
+}
+
 #admin{
-	position:absolute;
-	margin:auto;
-	width:1000px;
+	position: absolute;
+	margin: auto;
+	width: 1000px;
+	left: 7px;
+	top: 9px;
+	background-color:rgba(240,240,240,0.8);
 	}
 #dropp{
 	width:1500px;
 	position:fixed;
-	top:0px;
+	top:25px;
 	left:0px;
 	
 	z-index:30px;
-	background-color:white;
+background-color:rgba(240,240,240,0.8);
 	margin:auto;
 		border-bottom:thin solid green;
 			height:150px
+	}
+	
+#heade{
+	width:1500px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:200px;
+	background-color:white;
+	border-bottom:2px solid #58BF71;
+	
+	}
+#uploade{
+	width:1500px;
+	position:fixed;
+	top:25px;
+	background-color:rgba(240,240,240,0.5);
+	}
+#searchee{
+	width:1500px;
+	position:fixed;
+	top:25px;
+	left:200px;
+	background-color:;
+	}
+
+#search_resulte{
+	position:relative;
+	top:160px;
+	left:50px;
+	margin-top:auto;
+	width:300px;
+	z-index:-2px;
+	dborder:thin solid green;
+	fheight:500px;
 	}
 	
 #dropp input{
@@ -111,11 +224,12 @@
 	z-index:50;
 	}
 #groupf tr td{
-	border:thin solid green;
+	
+	border:thin solid orange;
 	border-radius:3px;
-	margin:px;
-	
-	
+	margin:;
+	background-color:rgba(255,255,255,0.74);
+	color:black;
 	}
 	#groupd tr td{
 	border: 1px solid green;
@@ -135,7 +249,7 @@
 	
 
 	color:red;
-	background-color: white;
+	background-color:rgba(240,240,240,0);
 	cursor:pointer;
 	
 	}
@@ -146,5 +260,23 @@
 	background-color: white;
 	cursor:pointer;
 	
+	}
+	
+#excel{
+	
+
+	font-size:20px;
+	border:thin dotted green;
+	background-color:green;
+	color:white;
+	}
+#excelb{
+	
+
+	font-size:21px;
+	border:thin solic green;
+	background-color:green;
+	color:white;
+	cursor:pointer;
 	}
 	

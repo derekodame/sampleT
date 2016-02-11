@@ -28,20 +28,17 @@ $title= date('F', $first_day);
 
 
 
-$first = $_POST['first'];
-$last = $_POST['last'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$cpassword = $_POST['conpass'];
-$done = $_POST['regdone'];
+$first =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['f'])));
+$last = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['l'])));
+$email =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['e'])));
+$password = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['p'])));
+$cpassword = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['pc'])));
+//$done = $_POST['regdone'];
 $datee = "  $title $day,$year";
 
 //if email exist direct
-if($emailss){
-		header("location: ./main/main.php");
-		}
-		
-if($done){
+
+
 	if($first){
 		if($last){
 			if($email){
@@ -56,9 +53,9 @@ if($done){
 $query = mysqli_query($con,"SELECT * FROM client WHERE email = '$email'");
 $numrows = mysqli_num_rows($query);
 if($numrows==0){
-$query = mysqli_query($con,"INSERT INTO client VALUES('','$first', '$last','$email','$hpass','$datee')");
+$query = mysqli_query($con,"INSERT INTO client VALUES('','$first', '$last','123$last','$email','$hpass','$datee')");
 
-$applyR="data insected";
+echo ".";
 
 //working with sessions
 
@@ -88,24 +85,21 @@ if($numrows ==1){
 			
 		
 			}
-				if($emailss){
-		header("location: ./main/main.php");
-		}else header("location: index.php");
 				
 		}
 		 
 
 		
 		
-	} else $applyR= "User already exist";
+	} else echo "User already exist";
 
 
-		}else $applyR = "Password do not match";
-		}else $applyR = "Password is too short";
-		}else $applyR = "Input password";
-		}else $applyR ="Email format not valid";
-		}else $applyR  ="input email";
-		}else $applyR= "input lastname";
-		}else $applyR = "input firstname";
-		}else $applyR = "Register ";
+		}else echo "Password do not match";
+		}else echo "Password is too short";
+		}else echo "Input password";
+		}else echo "Email format not valid";
+		}else echo "input email";
+		}else echo "input lastname";
+		}else echo  "input firstname";
+		
 		

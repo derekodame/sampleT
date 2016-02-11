@@ -4,7 +4,7 @@ include("connection.php");
 
 
 $id = $_POST['id'];
-$v = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['val'])));
+$v = mysqli_real_escape_string($con,nl2br(htmlspecialchars(ucfirst ($_POST['val']))));
 
 $n = $_POST['n'];
 

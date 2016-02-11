@@ -10,7 +10,7 @@ $terms = explode(" ", $k);
 
 
 
-$query = "select * from groupp where ";
+$query = "select * from dropbox where ";
 
  foreach($terms as $each){
 	 
@@ -26,22 +26,33 @@ $query = "select * from groupp where ";
 			 }
 			
 	  }
+	  	
+
+
+
 	 
 	 
 	  $query = mysqli_query($con,$query);
 	$numrows = mysqli_num_rows($query);
 			 
-	if(($k != "")){
-			 if(($numrows > 0)) { 
-while($row = mysqli_fetch_array($query)){
+if(($k != "")){
+if(($numrows > 0)) { 
+
+$c =0;
+
+while($row= mysqli_fetch_array($query)){
+	$c++;
+	$a= $row[$sel];
 	
-	 $y =$row[$sel]."<br/>";
-	 
 	
-		 echo $y;
-		 break;
-		 
-}
+	if($a==1 OR $a=="****" OR $a=="" ){
+		echo "<option style='display:none;'>$a</option>";
+		}else{ echo  "<option  style=\"cursor:pointer; border-left:5px solid #eee;  margin-bottom:3px; z-index:3300; \" id=\"$c$sel\"  onClick=\"results('$c$sel','$sel');\">$a </option>";
+		
+		}
+	
+	
+	}
 
 			 }
 			 }

@@ -1,45 +1,76 @@
-<?php include "./functions/register.php"?>
-<?php include "./functions/login.php"?>
+<?php
+include "./functions/error.php";
+ //include "./functions/register.php"?>
+<?php 
+session_start();
+
+$id = $_SESSION['id'];
+$emailss = $_SESSION['email'];
+$lasts	= $_SESSION['lastname'];
+$firsts = $_SESSION['firstname'];
+if($emailss){
+		header("location: ./main/main.php");
+		}else {//header("location: index.php");
+		}
+		
+?>
 
 
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>psych</title>
 <link type="text/css" href="./css/login.css" rel="stylesheet"/>
 </head>
-<center><a href="main/admin.php" style="color:white; font-size:50px;" >preview link to admin...</a></center>
+
 
 <body id="s" >
 <div id="top"></div>
 
 
 <div id="login">
-<form action="" method="post">
-<input name ="ilogin" id="ilogin"type="submit" value="Login" tabindex="0">
+<fordm action="" method="post">
 
-<input name ="ipassword" id="ipassword" type="password" placeholder="password" required tabindex="3">
-<input  autofocus name ="iemail" id="iemail" type="email"  placeholder="email"  required value="<?php echo $_POST['iemail'];?>"  tabindex="1">
-<span  style="float:right; margin-right:3px; font-size:12px"><?php echo $applyI; ?></span>
+<div  style="height:42px; background-color:orage; border-radius:4px;">
+<center><div  id="ss" style="height:19px;" ></div></center>
+<span  id="" ><div id="signin" style="height:50px;" ></div>
+</span></div>
+<div>
+<span><br/></span><input   autofocus name ="iemail" id="iemail" type="email"  placeholder="Email/Userid"   title="Email/Userid" value=""  ></div>
+<div>
+<span><center></center></span>
+<input name ="ipassword" id="ipassword" type="password" placeholder="password" required ></div>
+
+
+
+<div><input name ="ilogin" id="ilogin"type="submit" value="Sign In" onclick="signin();"  ></div>
 <span  style=" margin-top:2px; font-size:17px"></span>
 </form>
+<div><span style="float:ridght; color:#DFDCDC; cursor:pointer;"><center>Forgot Your Password</center></span></div>
+<div style="color:white; cursor:pointer;" id="regn"><center>Create an account</center></div>
+<div><span  style=" float:right;">Check here if Admin <input  id="check"  style="font-size:9px; width:35px" type="checkbox" ></span></div>
 </div>
 <p></p>
 
 <div id="reg" >
-<center> <?php echo $applyR; ?></center><br/>
-<form action="" method="post">
-<input name ="first" id ="first"type="text"  placeholder="firstname" required value="<?php echo $_POST['first'];?>">
-<input name ="last" id = "last" type="text"  placeholder="lastname" required value="<?php echo $_POST['last'];?>"><br/>
-<input oncopy="copy()" name ="email" id ="email" type="email" placeholder="email"  required value="<?php echo $_POST['email'];?>"><br/>
 
-<input name ="password" id="password" type="password" placeholder="password" required value="<?php echo $_POST['password'];?>"><br/>
-<input  name ="conpass" id="conpass" type="password" placeholder="confirm password" required value="<?php echo $_POST['conpass'];?>"><br/>
-<input name ="reset" id="reset" type="button" value="Reset">
-<input name ="regdone" id="regdone" type="submit" value="Done">
+ <div style=" width:325px;height:42px;" ><center><div style=" width:308px;height:42px; color:; margin-left:1px;" id="regs" ></div></center></div>
+ <div id='regp' style="height:80px;"  > </div>
+<fordm action="" method="post">
+<div >
+<input name ="first" id ="first"type="text"  placeholder="firstname" required value="">
+<input name ="last" id = "last" type="text"  placeholder="lastname" required value=""></div>
+<div>
+<input oncopy="copy()" name ="email" id ="email" type="email" placeholder="email"  required value=""></div>
+
+<div><input name ="password" id="password" type="password" placeholder="password" required value=""></div>
+<div><input  name ="conpass" id="conpass" type="password" placeholder="confirm password" required value=""></div>
+<div><input name ="reset" id="reset" type="button" value="Reset">
+<input onClick="register();" name ="regdone" id="regdone" type="submit" value="Done"></div>
 </form>
 
+<div id="sin"></div>
 </div>
 
 <?php 

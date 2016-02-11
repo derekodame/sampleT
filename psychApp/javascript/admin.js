@@ -87,6 +87,17 @@ function del(d){
     document.getElementById("success").innerHTML = ajax.responseText;
 	$("#showUpload").load("../functions/uploadshow.php");
 	$('#successs').hide();
+	
+	$.get('../functions/pagination.php', {v:1},function(data){
+$("#adminsrp").html( data);
+$("#ii").html(" "+"<span style='color:red;'>Page "+1+"</span>");});
+
+$('#left_p').show();
+$('#page').show();
+$('#prev').show();
+$('#nextt').show();
+$("#adminsrp").show();
+$("#search_resulte").hide();
     }
   };
 	

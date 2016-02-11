@@ -1,35 +1,103 @@
 @charset "utf-8";
 /* CSS Document */
 
-#top{ 
-position:absolute;
-width:99%;
-float:right;
 
+/*for client profile*/
+
+#sf {
 	
+position:relative;
+  margin:auto; 
+  top:100px; 
+  border-right: double 3px red;
+   width:320px;	
+	}
+#sf input{
+	
+	margin:5px;
+	  width:318px;
+	  font-size:24px;
+	  border:thin solid orange;
+	}
+	
+#to{
+	
+	}
+
+/*for client main*/
+body{
+background-image:url(../pictures/u.jpg);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:auto  ;
+	height:;
+	position:relative;
+	
+		
+	}
+#top{ 
+position:relative;
+
+
+
+
+	margin:auto;
+	width:1220px;
 	}
 
 #logout a{
 	float: left;
-	color: #EB1507;
+	color:rgba(215,160,105,1.00);
 	font-size: 26px;
-	
+	text-decoration:none;
+	background-color:;
+	border-radius:4px;
+	padding: 0 5px 0 5px;
 }
 
+#logout a:hover{
+	float: left;
+	color: #964F00;
+	font-size: 26px;
+	text-decoration:none;
+	background-color:#;
+	border-radius:4px;
+	padding: 0 5px 0 5px;
+}
+
+#setting a{
+
+color:#30DB29;
+float:left;
+ text-decoration:none; 
+ font-size:25px; 
+ cursor:pointer;
+}
+
+#setting a:hover{
+
+color:green;
+float:left;
+ text-decoration:none; 
+ font-size:25px; 
+ cursor:pointer;
+}
 
 #welcome{float:right;
-color:#CD9916;
-font-size:26px;}
+color:green;
+font-size:26px;
+}
 
 /*search area ---------------*/
 #search_body{
-	width: 1160px;
+	width: 1220px;
 	top: 50px;
 	position: relative;
 	border-top: thin solid #99CBAD;
 	margin: auto;
 	height: 50px;
 	border-collapse: collapse;
+
 
 	}
 #search_top{
@@ -83,8 +151,9 @@ font-size:26px;}
 	top:5px;
 	position:relative;
 	font-size: 24px;
-	border-right: thin solid #99CBAD ;
-	width:820px;
+	bordser-right: thin solid #99CBAD ;
+	width:1220px;
+	background-color:;
 
 	
 	
@@ -116,19 +185,28 @@ font-size:26px;}
 	
 }
 
+#clientAmind:focus{
+	
+	}
+
 	
 #search_result{
 	position:relative;
 	top:60px;
-	margin-top:auto;
-	width:100%;
+	
+	margin:auto;
+	width:1220px;
 	dborder:thin solid green;
-	fheight:500px;}
+	fheight:500px;
+		}
+	
 	
 #groupp{
-		position:fixed;
+	position:fixed;
 	bottom:0px;
-	left:65px;
+	ledft:65px;
+	width:1000px;
+	margin:auto;
 	
 	border:thin solid #191919;
 	background-color:white;
@@ -144,55 +222,21 @@ font-size:26px;}
 	top:70px;
 	position:relative;
 	margin:auto;
-	width:1050px;
+	width:1220px;
 	
 	border-top:thin solid #99CBAD;
 	height:600px;
 	}
-
-#left_admin{ 
-position:relative;
-float:left;
-
-
-border-right:thin solid #99CBAD;
-width:300px;
-}
-
-#left_admin div{
-		color: #0FD70C;
-		margin:5px;
-	
-	
-	border:thin solid green;
-	font-size:28px;
-	}
-#left_admin div:hover{
-	font-size:28px;
-		color: white;
-	cursor:pointer;
-	border:thin solid green;
-	background-color:#39C12E;
+#adminp{
+	width:1220px;
+	padding-bottom:6px;
+	border-bottom:thin solid #99CBAD;
 	}
 
 
-#right_admin{ 
-	margin:5px;
-position:relative;
-float:right;
 
-dborder:thin solid red;
-width:700px;
-}
 
-#right_admin div{
-		
-		margin:5px;
-	
-	
-	dborder:thin solid green;
-	font-size:18px;
-	}
+
 	
 	#clientall {
 	
@@ -214,7 +258,7 @@ margin:1px;
 
 #cliental td{
 	float:left;
-	width:130px;
+	width:430px;
 	font-size:18px;
 	background-color:#D7C7C7;
 	margin:1px;
@@ -299,9 +343,15 @@ margin:1px;
 	
 	}
 #groupf tr td{
-	border:thin solid green;
+	border:thin solid orange;
 	border-radius:3px;
-	margin:px;
+	margin:;
+	background-color:rgba(255,255,255,0.74);
+	color:black;
+	
+	}
+	
+#groupd{
 	
 	
 	}

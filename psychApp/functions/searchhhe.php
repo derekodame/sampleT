@@ -38,14 +38,14 @@ while($row=mysqli_fetch_array($query)){
 	
 	$id = ($row['id']);
 	
-	echo "<table  id='groupf'  class='$id'><tr ><td><div style='width:80px; overflow-x: hidden;'> $age</div></td><td><div style='width:140px; overflow-x: hidden;'>$Stage_of_Change</div></td><td><div style='width:140px; overflow-x: hidden;'>$Symptoms_and_Disorders</div></td><td><div style='width:200px; overflow-x: hidden;'>$Psychological_Treatment</div></td><td> <div style='width:120px; overflow-x: hidden;'>$Evidence_Level</div></td><td><div style='width:500px; height:80px; overflow-x: hidden;' contenteditable='false' >$Basis_for_Evidence </div></td></tr></table>";
+	echo "<table  id='groupf'  class='$id'><tr ><td><div style='width:80px; overflow-x: hidden;' id='a$id' onkeyup=\"up($id,'a$id','Age');\" contenteditable='true' >$age</div></td><td><div style='width:140px; overflow-x: hidden;' contenteditable='true'  id = 'b$id' onkeyup=\"up($id,'b$id','Stage_of_Change');\">$Stage_of_Change</div></td><td><div style='width:140px; overflow-x: hidden;' contenteditable='true' id='c$id' onkeyup=\"up($id,'c$id','Symptoms_and_Disorders');\">$Symptoms_and_Disorders</div></td><td><div style='width:200px; overflow-x: hidden;' contenteditable='true' id='d$id' onkeyup=\"up($id,'d$id','Psychological_Treatment');\">$Psychological_Treatment</div></td><td> <div  contenteditable='true' style='width:120px; overflow-x: hidden;' id='e$id' onkeyup=\"up($id,'e$id','Evidence_Level');\">$Evidence_Level</div></td><td><div style='width:500px; height:80px; overflow-x: hidden;' contenteditable='true' id='f$id' onkeyup=\"up($id,'f$id','Basis_for_Evidence');\" >$Basis_for_Evidence </div><td  style=' border: 0px solid white; 	background-color:rgba(240,240,240,1.00); ' ><br/><span id='xx' onclick='deles($id);' title='delete' >x</span></td></td></tr></table>";
 }
 echo "<br/><br/><br/><table border='1' id='groupp'  style='background-color:;'  ><tr ><td><center><div style='width:80px; overflow-x: hidden;'>Age</div></center></td><td ><center><div style='width:140px; overflow-x: hidden;'>Stage of change</div></center></td><td><center><div style='width:140px; overflow-x: hidden;'>Symptoms and Disorders</div></center></td><td><center><div style='width:200px; overflow-x: hidden;'>Psychological Treatment</div></center></td><td><center><div style='width:120px; overflow-x: hidden;'>Evidence Level</div></center></td><td><center><div style='width:500px; overflow-x: hidden;'>Basis for Evidence</div></center></td></tr></table>";
 			 
 			 }else echo "<span style='font-size:30px;'>No result found </span>";
 	}else echo " <br/><br/><br/><br/><br/><br/><br/><span style='font-size:25px; color:green;'>You did not select </span> <span style='font-size:40px; color:orange;'>Symptoms and Disorders</span><span style='font-size:25px; color:green;'> section</span>";	
 	}else echo "<br/><br/><br/><br/><br/><br/><br/><span style='font-size:25px; color:green;'> You did not select</span> <span style='font-size:40px; color:orange;'>Stage of Change </span><span style='font-size:25px; color:green;'>section</span>";		
-	}else echo "<br/><br/><br/><br/><br/><br/><span style='font-size:25px; color:green;'> You did not select</span> <span style='font-size:40px; color:orange;'> Age </span><span style='font-size:25px; color:green;'>group!</span>";
+	}else echo "<br/><br/><br/><br/><br/><br/><br/><span style='font-size:25px; color:green;'> You did not select</span> <span style='font-size:40px; color:orange;'> Age </span><span style='font-size:25px; color:green;'>group!</span>";
 
 
 
@@ -66,7 +66,7 @@ $qfecth = mysqli_query($con,"SELECT * FROM popout where email = '$emailss'");
 $row=mysqli_fetch_array($qfecth);
 
 //if 5 show pop			
-if($row['count']==7){
+if($row['count']==5){
 	
 echo "<script type='text/javascript'>
 $('#pop').show();

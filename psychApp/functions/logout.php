@@ -3,9 +3,7 @@
 
 error_reporting(E_ALL ^ E_NOTICE);
 require("connection.php");
-session_start();
-
-$emailss = $_SESSION['email'];
+include"./section.php";
 
 
 if($emailss){

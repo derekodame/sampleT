@@ -5,15 +5,12 @@ include"../functions/adminf.php";
 
 
 
-session_start();
-$emailad = $_SESSION['email'];
-$idad = $_SESSION['id'];
+include"../functions/section.php";
 
-
-/*//if email  admin exist direct
-if($emailad){
-		//header("location: ./main/main.php");
-		}else 	header("location: ../index.php");*/
+//check for admin id
+$check = mysqli_query($con,"select * from admin_pass where email ='$emailad'");
+$num = mysqli_num_rows($check);
+if ($num >0){}else {header("location: ../index.php");}
 
 ?>
 <!doctype html>
@@ -29,56 +26,29 @@ if($emailad){
 
 <div id="top">
 <span id="logout"><a  href="../functions/logout.php" >logout</a></span>
-
+<span id="logoudt"><a  href="../main/admine.php" >Admin Section</a></span>
 <span id= "welcome"><?php echo "welcome boss "; ?></span>
 
 </div>
 
 
 <div id="admin">
-<div id="left_admin">
-<div id="clientAmind">client</div>
-<div id="uploadAmind">upload</div>
-
-<a style="text-decoration:none;" href="adminE.php" ><div id="">grouping</div></a>
-
-
-</div>
-
-
-<div id="right_admin">
-
-
-<div id="client">
-<center><input  id="sclient"type="search" style=" border-radius:5px; width:670px; font-size:24px; background-color:green; color:white;"  placeholder="search through client"name="sclient"> </center><br/>
-<?php echo  clientAll($con);?>
-</div>
-
-
-<div id="upload">
-
-<span id="success"></span><br/>
-
-<fsorm method="post"  enctype="multipart/form-data">
-<input type="file" name="excel" id="excel"   multiple /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="submit"/> <span  id="successs">loading...<img   width="15px"  height="15px"src="../pictures/loading.gif"></span>
-
-
-</form>
+<div id="adminp">
 <br/>
-<div id ="showUpload"></div>
-</div>
+Change Password: 
+<input type="text" placeholder="current Password">
+<input type="text" placeholder="New Password">
+<input type="button" value="Done">
+</div><br/>
 
+<div id="adminp">
+<br/>
+ 
 
-
-</div>
-
-
-
-
-
-
-
-
+<input type="search" placeholder="Search through for names">
+<input type="button" value="Search"> data result<br/><br/>
+<?php echo  clientAll($con);?>
+</div><br/>
 
 
 </div>
