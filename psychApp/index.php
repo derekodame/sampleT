@@ -47,9 +47,9 @@ if($emailss){
 <div><input name ="ilogin" id="ilogin"type="submit" value="Sign In" onclick="signin();"  ></div>
 <span  style=" margin-top:2px; font-size:17px"></span>
 </form>
-<div><span style="float:ridght; color:#DFDCDC; cursor:pointer;"><center>Forgot Your Password</center></span></div>
+<div><span style="float:ridght; color:rgba(43,43,43,1.00); cursor:pointer;"><center>Forgot Your Password</center></span></div>
 <div style="color:white; cursor:pointer;" id="regn"><center>Create an account</center></div>
-<div><span  style=" float:right;">Check here if Admin <input  id="check"  style="font-size:9px; width:35px" type="checkbox" ></span></div>
+
 </div>
 <p></p>
 

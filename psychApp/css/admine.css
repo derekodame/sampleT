@@ -6,7 +6,7 @@ background-image:url(../pictures/u.jpg);
 	background-repeat:no-repeat;
 	background-position:center ;
 	background-size:cover  ;
-	height:;
+	
 	position:relative;
 	
 	}
@@ -82,7 +82,7 @@ border-color:white;
 	width: 1000px;
 	left: 7px;
 	top: 9px;
-	background-color:rgba(240,240,240,0.8);
+	height:auto;
 	}
 #dropp{
 	width:1500px;
@@ -126,7 +126,6 @@ background-color:rgba(240,240,240,0.8);
 	top:160px;
 	left:50px;
 	margin-top:auto;
-	width:300px;
 	z-index:-2px;
 	dborder:thin solid green;
 	fheight:500px;
@@ -228,7 +227,7 @@ background-color:rgba(240,240,240,0.8);
 	border:thin solid orange;
 	border-radius:3px;
 	margin:;
-	background-color:rgba(255,255,255,0.74);
+	background-color:rgba(255,255,255,1.74);
 	color:black;
 	}
 	#groupd tr td{

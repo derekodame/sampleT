@@ -95,6 +95,43 @@ $("#search_resulte").hide();
 	});
 }
 
+
+//add admins
+function add_admin(){
+		var f = $('#fe').val();
+		var l = $('#le').val();
+		var e = $('#ee').val();
+		var p = $('#pe').val();
+		var c = $('#ce').val();
+		var i = $('#ie').val();
+		
+//alert(f);
+		
+		$.post('../functions/add_admins.php', {f:f,l:l,e:e,p:p,c:c,i:i},function(data){
+			
+				
+				$("#add_adminse").html(data);
+				
+		
+		  
+	});
+}
+
+//radio activate/ deactivate
+
+function act(r,id){
+
+if(r==1){
+	var rr = "Active";
+	}else var rr = "Deactive";
+	
+	var s = $('#acc'+id).text(rr);
+		
+	
+	$.post('../functions/actordeact.php', {id:id,r:r},function(data){
+			});
+	}
+
 //small serach get
 function searche(id,value){
 	//alert(value);

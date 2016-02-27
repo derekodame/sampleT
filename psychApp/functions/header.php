@@ -30,11 +30,11 @@ if($num>0){
 </head>
 <body>
 <div id="top">
-<span id="logout"><a  href="../functions/logout.php" >logout</a></span> 
+<span id="logout"><a  href="../functions/logout.php" title="Log Out" ></a></span> 
 
 <span id="setting" > 
 <a style=" margin-left:3px; color:orange;" href="./main.php"> Main</a></span>
-<span id= "welcome"><a style="color:green; text-decoration:none;" href="./profilec.php">
+<span id= "welcome"><a style=" font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;color:white; text-decoration:none; background-color: ;" href="./profilec.php">
 
 <?php
 

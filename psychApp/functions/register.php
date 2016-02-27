@@ -53,7 +53,7 @@ $datee = "  $title $day,$year";
 $query = mysqli_query($con,"SELECT * FROM client WHERE email = '$email'");
 $numrows = mysqli_num_rows($query);
 if($numrows==0){
-$query = mysqli_query($con,"INSERT INTO client VALUES('','$first', '$last','123$last','$email','$hpass','$datee')");
+$query = mysqli_query($con,"INSERT INTO client VALUES('','$first', '$last','123$last','$email','$hpass','$datee','0')");
 
 echo ".";
 

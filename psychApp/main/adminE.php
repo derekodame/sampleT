@@ -20,19 +20,20 @@ if ($num >0){}else {header("location: ../index.php");}
 </head>
 
 <body  onload="loadp();">
-
-<div id="admin">
 <div id="search_resulte">
 
 </div>
+<div id="admin">
+
 
 <div id="heade">
-<span id="logout"><a  href="../functions/logout.php" >logout</a></span>
+<span id="logout" ><a  style="color:orange; font-size:20px;
+text-decoration:none; margin-left:2px;" href="../functions/logout.php" > logout</a></span>
 <span id="insertm"  style=" cursor:pointer; font-size:20px; color:green;  border-left:thin solid green; border-right:thin solid green; padding:2px;">Insert manually</span> 
  <span id="uploadee" style=" cursor:pointer; font-size:20px; color:green;  ">Upload</span>
  <span id="searched" style="cursor:pointer; font-size:20px; color:green; border-left:thin solid green;  padding:2px;"> Search </span>
- <span id="cliente" ><a  href="admin.php" style=" text-decoration:none; color:orange; border-left:thin solid green; padding:2px;"> Client</a> </span>
-
+ <span id="cliente" ><a  href="admin.php" style=" text-decoration:none; color:orange; border-left:thin solid green; padding:2px;"> Client/admin</a> </span>
+<span id="logout"><a  href="../functions/logout.php"  title="logout"></a></span>
 </div>
 
 

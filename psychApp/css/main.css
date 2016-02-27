@@ -9,7 +9,7 @@
 position:relative;
   margin:auto; 
   top:100px; 
-  border-right: double 3px red;
+  gborder-right: double 3px red;
    width:320px;	
 	}
 #sf input{
@@ -46,29 +46,26 @@ position:relative;
 	}
 
 #logout a{
-	float: left;
+	float: right;
 	color:rgba(215,160,105,1.00);
 	font-size: 26px;
+background-image:url(../pictures/exit.png);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:30px  ;
+	width:30px;
+	height:30px;
 	text-decoration:none;
 	background-color:;
 	border-radius:4px;
-	padding: 0 5px 0 5px;
+	margin: 0 5px 0 5px;
 }
 
-#logout a:hover{
-	float: left;
-	color: #964F00;
-	font-size: 26px;
-	text-decoration:none;
-	background-color:#;
-	border-radius:4px;
-	padding: 0 5px 0 5px;
-}
 
 #setting a{
 
 color:#30DB29;
-float:left;
+float:right;
  text-decoration:none; 
  font-size:25px; 
  cursor:pointer;
@@ -77,15 +74,17 @@ float:left;
 #setting a:hover{
 
 color:green;
-float:left;
+float:right;
  text-decoration:none; 
  font-size:25px; 
  cursor:pointer;
 }
 
-#welcome{float:right;
-color:green;
+#welcome{float:left;
+color:white;
 font-size:26px;
+font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;
+text-decoration:none;
 }
 
 /*search area ---------------*/
@@ -255,12 +254,20 @@ color:green;
 margin:1px;
 }
 
-
+#clientalh td{
+	float:left;
+	width:200px;
+	font-size:18px;
+	background-color:rgba(84,84,84,1.00);
+	color:white;
+	margin:1px;
+	
+	}
 #cliental td{
 	float:left;
-	width:430px;
+	width:200px;
 	font-size:18px;
-	background-color:#D7C7C7;
+	background-color:white;
 	margin:1px;
 	
 	}
@@ -346,7 +353,7 @@ margin:1px;
 	border:thin solid orange;
 	border-radius:3px;
 	margin:;
-	background-color:rgba(255,255,255,0.74);
+	background-color:rgba(255,255,255,1.74);
 	color:black;
 	
 	}
