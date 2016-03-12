@@ -1,0 +1,381 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*for client profile*/
+
+#sf {
+	
+position:relative;
+  margin:auto; 
+  top:100px; 
+  gborder-right: double 3px red;
+   width:320px;	
+	}
+#sf input{
+	
+	margin:5px;
+	  width:318px;
+	  font-size:24px;
+	  border:thin solid orange;
+	}
+	
+#to{
+	
+	}
+
+/*for client main*/
+body{
+background-image:url(../pictures/u.jpg);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:auto  ;
+	height:;
+	position:relative;
+	
+		
+	}
+#top{ 
+position:relative;
+
+
+
+
+	margin:auto;
+	width:1220px;
+	}
+
+#logout a{
+	float: right;
+	color:rgba(215,160,105,1.00);
+	font-size: 26px;
+background-image:url(../pictures/exit.png);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:30px  ;
+	width:30px;
+	height:30px;
+	text-decoration:none;
+	background-color:;
+	border-radius:4px;
+	margin: 0 5px 0 5px;
+}
+
+
+#setting a{
+
+color:#30DB29;
+float:right;
+ text-decoration:none; 
+ font-size:25px; 
+ cursor:pointer;
+}
+
+#setting a:hover{
+
+color:green;
+float:right;
+ text-decoration:none; 
+ font-size:25px; 
+ cursor:pointer;
+}
+
+#welcome{float:left;
+color:white;
+font-size:26px;
+font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;
+text-decoration:none;
+}
+
+/*search area ---------------*/
+#search_body{
+	width: 1220px;
+	top: 50px;
+	position: relative;
+	border-top: thin solid #99CBAD;
+	margin: auto;
+	height: 50px;
+	border-collapse: collapse;
+
+
+	}
+#search_top{
+	position:absolute;
+	top: 5px;
+	right: 15px;
+}
+#search{
+	color:green;
+	width:200px;
+	}
+#search:hover{
+		background-color:green;
+	color:white;
+ border: thin solid black ;
+	width:200px;
+	}
+	
+	
+#search_top input{
+	font-size:24px;
+	border:thin solid green;
+	}
+	
+#done_search:hover{
+	cursor:pointer;
+	background-color:green;
+	color:white;
+	}
+
+#done_search{
+	color:green;
+	background-color:#F3EEEE;
+	border-radius:4px;}
+	
+#done_search_s{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+	border-radius:4px;}
+	
+#done_search_s:hover{
+	font-size:20px;
+	cursor:pointer;
+	background-color:green;
+	color:white;
+	}
+
+	
+#left_dropdown {
+	
+	float:left;
+	position:relative;
+	font-size: 24px;
+	bordser-right: thin solid #99CBAD ;
+	width:1220px;
+	background-color:;
+
+	
+	
+}
+#left_dropdown select{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: black;
+	width:240px;
+	border: thin  dotted  green;
+	
+	mmargin:5px
+	
+	
+}
+#left_dropdown option{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: #0FD70C;
+	width:300px;
+	border:thin solid green;
+	
+	margin:5px
+	
+	
+}
+
+#clientAmind:focus{
+	
+	}
+
+	
+#search_result{
+	position:relative;
+	top:60px;
+	
+	margin:auto;
+	width:1220px;
+	dborder:thin solid green;
+	fheight:500px;
+		}
+	
+	
+#groupp{
+	position:fixed;
+	bottom:0px;
+	ledft:65px;
+	width:1000px;
+	margin:auto;
+	
+	border:thin solid #191919;
+	background-color:white;
+	color:green;
+	border-radius:5px;
+	
+	
+	}
+	
+/*---------------- admin-------------*/
+
+#admin{
+	top:70px;
+	position:relative;
+	margin:auto;
+	width:1220px;
+	
+	border-top:thin solid #99CBAD;
+	height:600px;
+	}
+#adminp{
+	width:1220px;
+	padding-bottom:6px;
+	bdorder-bottom:thin solid #99CBAD;
+	}
+
+
+
+
+
+	
+	#clientall {
+	
+	
+kborder:thin solid blue;
+
+margin:1px;
+}
+#clientall td{
+	float:left;
+	width:129px;
+	font-size:21px;
+
+color:green;
+
+margin:1px;
+}
+
+#clientalh td{
+	position:relative;
+	float:left;
+	width:155px;
+	font-size:18px;
+	background-color:rgba(84,84,84,1.00);
+	color:white;
+	margin:1px;
+	
+	}
+#cliental td{
+	position:relative;
+	float:left;
+	width:155px;
+	font-size:18px;
+	background-color:white;
+	margin:1px;
+	
+	}
+#uptable td{
+	float:left;
+	width:230px;
+	font-size:18px;
+	background-color:#D7C7C7;
+	margin:1px;
+	}
+	
+#uptablee td{
+float:left;
+	width:230px;
+	font-size:21px;
+
+color:green;
+
+margin:1px;
+	}
+
+#th{
+float:left;
+font-size:21px;
+color:orange;
+margin:1px;
+border:0;
+	}
+#th:hover{
+	cursor:pointer;
+float:left;
+font-size:21px;
+color:red;
+margin:1px;
+	}
+	
+/* upload----- */
+
+#excel{
+	kborder:thin solid blue;
+	
+	color:white;
+	font-size:18px;
+	background-color:green;
+	
+	
+	}
+	
+#excelb{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+	
+	}
+#excelb:hover{
+	cursor:pointer;
+	font-size:20px;
+	color:white;
+	background-color:green;
+
+	}
+#aa{
+	font-size:20px;
+	color:green;
+	background-color:#F3EEEE;
+
+	}
+#aa:hover{ 
+	
+	font-size:20px;
+	color:white;
+	background-color:green;
+	
+	}
+#group td{
+	
+	
+	width:300px;
+	
+	
+	}
+#groupf tr td{
+	border:thin solid orange;
+	border-radius:3px;
+	margin:;
+	background-color:rgba(255,255,255,1.74);
+	color:black;
+	
+	}
+	
+#groupd{
+	
+	
+	}
+#groupd tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+#groupp tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}

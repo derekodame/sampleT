@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+background-image:url(../pictures/u.jpg);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:cover  ;
+	
+	position:relative;
+	
+	}
+
+	
+#searchee select{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: black;
+	width:240px;
+	border: thin  dotted  green;
+	
+	mmargin:5px
+	
+	
+}
+#searchee option{
+	position:relative;
+	
+	font-size: 20px;
+	
+	color: #0FD70C;
+	width:300px;
+	border:thin solid green;
+	
+	margin:5px
+	
+	
+}
+
+body:active{
+ccolor:red;   
+}
+
+#groupf div:focus{
+	background-color:#E9E5E5;
+	
+	}
+	
+#page2 button{
+	background-color:white;
+	 border-radius:4px; 
+	 margin:5px;  
+	 color:#1E5B1E; 
+	 padding:0 5px 0  5px; 
+	 cursor:pointer;
+	}
+#page button{
+	background-color:white;
+	 border-radius:4px; 
+	 margin:5px;  
+	 color:#1E5B1E; 
+	 padding:0 5px 0  5px; 
+	 cursor:pointer;
+	}
+#page2 button:focus{
+background-color:green;
+color:white;
+border-color:white;
+}
+
+#page button:focus{
+background-color:green;
+color:white;
+border-color:white;
+}
+
+#admin{
+	position: absolute;
+	margin: auto;
+	width: 1000px;
+	left: 7px;
+	top: 9px;
+	height:auto;
+	}
+#dropp{
+	width:1500px;
+	position:fixed;
+	top:25px;
+	left:0px;
+	
+	z-index:30px;
+background-color:rgba(240,240,240,0.8);
+	margin:auto;
+		border-bottom:thin solid green;
+			height:150px
+	}
+	
+#heade{
+	width:1500px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:200px;
+	background-color:white;
+	border-bottom:2px solid #58BF71;
+	
+	}
+#uploade{
+	width:1500px;
+	position:fixed;
+	top:25px;
+	background-color:rgba(240,240,240,0.5);
+	}
+#searchee{
+	width:1500px;
+	position:fixed;
+	top:25px;
+	left:200px;
+	background-color:;
+	}
+
+#search_resulte{
+	position:relative;
+	top:160px;
+	left:50px;
+	margin-top:auto;
+	z-index:-2px;
+	dborder:thin solid green;
+	fheight:500px;
+	}
+	
+#dropp input{
+	
+	width:200px;
+	font-size: 18px;
+	
+	color: #0FD70C;
+	
+	border:thin solid green;
+	
+	
+	}
+
+#dropp div{
+	lborder:thin solid green;
+	float:left;
+	width:200px;
+	margin:3px;
+
+	}
+#dropp textarea{
+	border:thin solid green;
+	float:left;
+	width:280px;
+	margin:3px;
+	
+	resize:none;}
+#groupp{
+	position:fixed;
+	bottom:26px;
+	left:57px;
+	
+	border:thin solid #191919;
+	background-color:white;
+	color:green;
+	border-radius:5px;
+	
+	
+	}
+#page{
+	
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:#1E5B1E;
+	width:100%;
+	height:25px;
+	}
+#page2{
+	
+	position:fixed;
+	bottom:82px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:white;
+	height:300px;
+	width:300px;
+	overflow-x:hidden;
+	}
+#x{
+	
+	position:fixed;
+	bottom:63px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:white;
+	
+	width:50px;
+	cursor:pointer;
+	z-index:70;
+	}
+#xs{
+	
+	position:fixed;
+	bottom:63px;
+	left:0px;
+	
+	
+	border:thin solid #A38F8F;
+	background-color:white;
+	
+	width:80px;
+	cursor:pointer;
+	z-index:50;
+	}
+#groupf tr td{
+	
+	border:thin solid orange;
+	border-radius:3px;
+	margin:;
+	background-color:rgba(255,255,255,1.74);
+	color:black;
+	}
+	#groupd tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+#groupp tr td{
+	border: 1px solid green;
+	border-radius: 3px;
+	margin: px;
+	color:white;
+	background-color: #1E5B1E;
+	}
+ #xx{
+	
+
+	color:red;
+	background-color:rgba(240,240,240,0);
+	cursor:pointer;
+	
+	}
+#up{
+	
+
+	color:green;
+	background-color: white;
+	cursor:pointer;
+	
+	}
+	
+#excel{
+	
+
+	font-size:20px;
+	border:thin dotted green;
+	background-color:green;
+	color:white;
+	}
+#excelb{
+	
+
+	font-size:21px;
+	border:thin solic green;
+	background-color:green;
+	color:white;
+	cursor:pointer;
+	}
+	

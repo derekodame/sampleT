@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#s{
+	background-color: #000000;
+	color:#595959;
+	background-image:url(../pictures/u.jpg);
+	background-repeat:no-repeat;
+	background-position:center ;
+	background-size:  auto;
+	width:1000px;
+	margin:auto;
+	font-size:24px;
+	codlor:#FBB732
+	
+}
+
+
+
+/* login*/
+#login{ 
+position:relative;
+margin:auto;
+width:310px;
+top:100px
+
+
+}
+
+#signin{
+	background-image:url(../pictures/signin.png);
+	background-repeat:no-repeat;
+	background-position:left  ;
+	background-size:  100px;
+	}
+#sin{
+	background-image:url(../pictures/signinr.png);
+	background-repeat:no-repeat;
+	background-position:left  ;
+	height:80px;
+	background-size:  100px;
+	cursor:pointer;
+	}
+#login input{
+	width:308px;
+	margin-bottom:5px;
+	
+}
+
+#ilogin{
+	background-image:url(../pictures/lock-icon_318-42569.png);
+	background-size:20px;
+	background-position:left;
+	background-repeat:no-repeat;
+	}
+
+/* register*/
+#regp{
+	
+	background-image:url(../pictures/r.png);
+	background-size:115px;
+	background-position:center;
+	background-repeat:no-repeat;
+	}
+#reg{
+	top:15px;
+	position: relative;
+	margin: auto;
+	
+	height: 400px;
+	width: 513px;
+}
+
+#reg div{
+		position: abosolute;
+	margin: auto;
+	color:;
+	
+	width:325px;
+	
+	}
+#reg input{
+	margin-bottom:2px;
+	margin-top:2px;
+	}
+
+input{
+	
+	border-radius: 4px;
+	border: 2px solid #3B3131;
+	height: 30px;
+}
+
+#first{width:150px;}
+#last{width:150px; }
+#email{ width:308px; margin:auto;}
+#password{width:308px;}
+#conpass{width:308px;}
+#regdone{ width:154px; cursor:pointer;}
+#reset{width:154px; cursor:pointer;}
+
+
