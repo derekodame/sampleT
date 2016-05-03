@@ -10,7 +10,7 @@ $Psychological =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['ps
 $Evidence =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['evidence'])));
 $Basis = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['basis'])));
 
-$empty= " All fields or put N/A";
+$empty= "Input all fields or put N/A";
 
 if($age){
 if($stage){
@@ -64,42 +64,6 @@ switch ($Evidence) {
 	
 	}else echo $empty;
 
-//add admins
 
-$f = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['f'])));
-$l = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['l'])));
-$i = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['i'])));
-$e =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['e'])));
-$p =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['p'])));
-$c = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['c'])));
 
-if($f){
-if($l){
-if($i){
-if($e){
-if($p){
-	if($c){
-		
-		
-
-		
-		$query = mysqli_query($con,"insert into admin_pass values('id','$f','$l','$i','$e','$p','$c')");
-		
-	 if ($query === false) {
-    die('Invalid query: ' . mysql_error());
-}else echo "Inserted successfully :)";
-		
-	
-		}else echo $empty;
-	
-	
-	}else  echo $empty;
-	
-	}else  echo $empty;
-	
-	}else  echo $empty ;
-	
-	}else echo $empty;
-	
-	}else echo $empty;
  ?>

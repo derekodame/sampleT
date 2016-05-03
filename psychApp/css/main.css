@@ -147,7 +147,8 @@ text-decoration:none;
 
 	
 #left_dropdown {
-	top:5px;
+	
+	float:left;
 	position:relative;
 	font-size: 24px;
 	bordser-right: thin solid #99CBAD ;
@@ -229,7 +230,7 @@ text-decoration:none;
 #adminp{
 	width:1220px;
 	padding-bottom:6px;
-	border-bottom:thin solid #99CBAD;
+	bdorder-bottom:thin solid #99CBAD;
 	}
 
 
@@ -255,8 +256,9 @@ margin:1px;
 }
 
 #clientalh td{
+	position:relative;
 	float:left;
-	width:200px;
+	width:155px;
 	font-size:18px;
 	background-color:rgba(84,84,84,1.00);
 	color:white;
@@ -264,8 +266,9 @@ margin:1px;
 	
 	}
 #cliental td{
+	position:relative;
 	float:left;
-	width:200px;
+	width:155px;
 	font-size:18px;
 	background-color:white;
 	margin:1px;

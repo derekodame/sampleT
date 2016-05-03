@@ -31,6 +31,12 @@ while($row=mysqli_fetch_array($query)){
 	$Basis_for_Evidence =ucfirst( $row['Basis_for_Evidence']);
 	
 	$id = ($row['id']);
+	
+	
+	if($age=="Child"){
+		
+		mysqli_query($con,"DELETE FROM groupp WHERE id = '$id'");
+		}
 	 
 	echo "<table  id='groupf' class='$id'><tr  ><td  ><div  contenteditable='true'  style='width:80px; overflow-x: hidden;'id='a$id' onkeyup=\"up($id,'a$id','Age');\">  $age</div></td><td ><div style='width:140px; overflow-x: hidden;' contenteditable='true'  id = 'b$id' onkeyup=\"up($id,'b$id','Stage_of_Change');\" >$Stage_of_Change</div></td><td><div style='width:140px; overflow-x: hidden;' contenteditable='true' id='c$id' onkeyup=\"up($id,'c$id','Symptoms_and_Disorders');\">$Symptoms_and_Disorders</div></td><td><div style='width:200px; overflow-x: hidden;' contenteditable='true' id='d$id' onkeyup=\"up($id,'d$id','Psychological_Treatment');\">$Psychological_Treatment</div></td><td> <div contenteditable='true' style='width:120px; overflow-x: hidden;' id='e$id' onkeyup=\"up($id,'e$id','Evidence_Level');\">$Evidence_Level</div></td><td><div style='width:500px; height:80px; overflow-x: hidden;' contenteditable='true'  contenteditable='true' id='f$id' onkeyup=\"up($id,'f$id','Basis_for_Evidence');\">$Basis_for_Evidence </div></td><td  style=' border: 0px solid ;	background-color:rgba(240,240,240,0); ' ><br/><span id='xx' onclick='delep($id);' title='delete' >x</span></td></tr></table>";
 

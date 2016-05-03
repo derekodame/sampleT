@@ -81,8 +81,8 @@ while($row= mysqli_fetch_array($query)){
 	
 	
 	if($a==1 OR $a=="****" OR $a==""){
-		echo "<option style='display:none;'>$a</option>";
-		}else echo  "<option >$a</option>";
+		echo "<option id='ex' style='display:none;'>$a</option>";
+		}else echo  "<option title='$a'  >$a</option>";
 	
 	
 	}
