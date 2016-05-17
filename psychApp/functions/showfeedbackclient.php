@@ -32,12 +32,12 @@ echo "<div id = '$id'> $cc . $q <br/>
 <th width='50px' ><center>N/A</center></th>
 </tr>
 
-<tr><td width='50px'><center><input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"5\"></center></td>
-<td width='50px'><center><input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"4\"></center></td>
+<tr><td width='50px'><center><input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"1\"></center></td>
+<td width='50px'><center><input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"2\"></center></td>
 <td width='50px'><center><input type='radio'  name=\"r$id\" id=\"r$id\" value=\"3\"></center></td>
-<td width='50px'><center><input type='radio'  name=\"r$id\" id=\"r$id\" value=\"2\"></center></td>
+<td width='50px'><center><input type='radio'  name=\"r$id\" id=\"r$id\" value=\"4\"></center></td>
 <td width='50px'><center>
-<input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"1\"></td></center>
+<input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"5\"></td></center>
 <td></td>
 <td width='50px'><center>
 <input type='radio'  name=\"r$id\"  id=\"r$id\" value=\"0\"></td></center>

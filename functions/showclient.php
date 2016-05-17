@@ -18,9 +18,9 @@ $row=mysqli_fetch_array($query);
 if($q==1){
 echo "$v";
 
-$query = mysqli_query($con,"UPDATE feedbackq SET shows = '0' where id ='$i'");
+$query = mysqli_query($con,"UPDATE feedbackq SET shows = '1' where id ='$i'");
 }else  {
-	$query = mysqli_query($con,"UPDATE feedbackq SET shows = '1' where id ='$i'");
+	$query = mysqli_query($con,"UPDATE feedbackq SET shows = '0' where id ='$i'");
 	echo "did not";
 	}
 

@@ -1,5 +1,24 @@
 
+$("#hii").click(function() {
+	
+	$("#hi").show();
+	});
+	
+	$("#hss").click(function() {
+	
+	$("#hs").show();
+	});
+	
+	$("#hssi").click(function() {
+	
+	$("#hsss").show();
+	});
 
+$("#hx").click(function() {
+	
+	$("#hii").hide();
+	});
+	
 
 //for tooltip
 
@@ -48,6 +67,18 @@ $(document).ready(function(e) {
 		});
 });
 
+function feedas(d,r){
+	alert(r);
+	
+	}
+
+function feedad(f){
+	alert("Thanks for you feed back :)");
+$('#pop').hide();
+
+var su = "http://localhost/psychApp/functions/showfeedbackclient.php";
+$('#popc').load(su);
+	}
 
 ///pop out ----
 
@@ -210,6 +241,22 @@ $("#ii").html(" ");
 });
 }
 
+function searchclient(){
+	
+
+$('#successsh').show();
+
+var cl = $('#cl').val();
+
+
+$.get("../functions/searchclient.php", {cl:cl},function(data){
+	
+	
+
+$('#clientsh').html(data) 	;
+
+});
+}
 //--- disable
 
 //client profile----
@@ -237,5 +284,22 @@ $('#p').html(data)
 if(data = "Update was succeful"){
 $('#welcome').html("Welcome " + f + " "+ l);
 }
+	});
+}
+
+
+//deleting user account
+
+function profiledelete(d){
+	
+	var p = $('#currentpass').val();
+	$.post("../functions/deleteuser.php", {d:d,p:p},function(data){
+	
+		$('#p').html(data)
+	if(data =="5"){
+			alert("You have been removed from the database.");
+		window.location="../functions/logout.php";	
+	}
+	
 	});
 }

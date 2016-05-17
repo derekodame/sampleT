@@ -1,8 +1,15 @@
 
+//all help
+
+
 
 $('#dropp').hide();
 $('#uploade').hide();
 $('#searchee').hide();
+
+$("#feedid").load("../functions/showfeedback.php");
+
+$("#sdc").load("../functions/admindb.php");
 
 $('#insertm').click(function (){
 	
@@ -24,6 +31,189 @@ $('#searched').click(function (){
 $('#dropp').hide();
 	});
 
+
+////menu for admin ****
+
+$('#upe').click(function (){
+	
+$('#adupdate').show();
+
+$('#upclient').hide();
+$('#feedbackanswers').hide();
+$('#newupdate').hide();
+$('#feedadm').hide();
+$('#deletedate').hide();
+	});
+	
+$('#deleteacc').click(function (){
+	
+$('#deletedate').show();
+$('#adupdate').hide();
+$('#upclient').hide();
+$('#feedbackanswers').hide();
+$('#newupdate').hide();
+$('#feedadm').hide();
+	});	
+
+$('#ade').click(function (){
+	$('#deletedate').hide();
+$('#adupdate').hide();
+$('#feedbackanswers').hide();
+$('#upclient').hide();
+$('#feedadm').hide();
+
+$('#newupdate').show();
+var su = "http://localhost/psychApp/functions/admindb.php";
+$('#newupdate').load(su);
+
+	});
+	
+	
+function admindelete(a){
+	
+	
+	var p = prompt("Please input your current password", "");
+    
+    
+
+	$.post("../functions/admindelete.php", {a:a,p:p},function(data){
+		
+		
+		
+	
+		
+	if(data == "invalid input"){
+		alert(data);
+		}else if(data == "account deleted"){
+		window.location="../functions/logout.php";
+		alert(data);
+		}
+	
+	});
+}	
+
+
+//feedback *****
+
+
+function feed(){
+		var q = $('#q').val();
+		
+		
+//alert(q);
+		
+		$.post('../functions/feedback.php', {q:q},function(data){
+			
+				
+				$("#feeds").html(data);
+				$("#feedid").load("../functions/showfeedback.php");
+		
+		  
+	});
+}
+
+//feedback show questions on client side
+
+function showclient(u,id){
+		
+		
+//alert(q);
+		
+		$.post('../functions/showclient.php', {u:u,id:id},function(data){
+			
+				
+				//alert(data);
+				
+		
+		  
+	});
+}
+
+
+//feedback show questions on client side delete
+
+function deleps(d){
+		var v = $('#hidden').text();
+		$('.'+d).hide('slow');
+		
+		$.post('../functions/deleteadmine.php', {deletee:d},function(data){
+			
+	
+	
+	
+	
+			
+				});
+		
+}
+
+
+//range feedback
+
+function range(id,e,identity){
+	$('#'+id).hide("");
+var cn = document.getElementsByName(identity);
+for (var i = 0, length = cn.length; i < length; i++) {
+    if (cn[i].checked) {
+       var ac=(cn[i].value);
+
+var an = $('#cn'+id).val();
+	
+	
+
+	
+	
+	$.post('../functions/feedadmin.php', {id:id,e:e,ac:ac,an:an},function(data){
+			
+	//alert(data);
+	
+	
+	
+			
+				});
+        break;
+    }
+}
+	
+	
+	
+	}
+
+
+$('#ce').click(function (){
+	
+$('#adupdate').hide();
+
+$('#upclient').show();
+$('#feedadm').hide();
+$('#feedbackanswers').hide();
+$('#newupdate').hide();
+$('#deletedate').hide();
+	});
+	
+	
+$('#fe').click(function (){
+	$('#adupdate').hide();
+
+$('#upclient').hide();
+$('#feedadm').show();
+$('#feedbackanswers').hide();
+$('#newupdate').hide();
+$('#deletedate').hide();
+
+	});
+$('#fea').click(function (){
+	$('#adupdate').hide();
+
+$('#upclient').hide();
+$('#feedadm').hide();
+$('#feedbackanswers').show();
+
+$('#newupdate').hide();
+$('#deletedate').hide();
+	});
+	
+	
 
 //load page 1
 function loadp(){ $.get('../functions/pagination.php', {v:1},function(data){
@@ -111,13 +301,14 @@ function add_admin(){
 			
 				
 				$("#add_adminse").html(data);
+				$("#sdc").load("../functions/admindb.php");
 				
 		
 		  
 	});
 }
 
-//radio activate/ deactivate
+//radio activate/ deactivate client
 
 function act(r,id){
 
@@ -131,6 +322,36 @@ if(r==1){
 	$.post('../functions/actordeact.php', {id:id,r:r},function(data){
 			});
 	}
+	
+	
+//check if addmin
+function checkaddmin(i,f,l,e,p,ade){
+	//alert(ade);
+	
+	var t = $('#adde'+i).text();
+	
+	
+		if(t=="Admin"){
+	var rr = "Client";
+	}else var rr = "Admin";
+	
+	
+	
+	$('#adde'+i).text(rr);
+	
+		$.post('../functions/checkaddmin.php', {i:i,f:f,l:l,e:e,p:p},function(data){
+			
+				
+				alert(data);
+				
+		
+		  
+	});
+
+	
+	}
+
+
 
 //small serach get
 function searche(id,value){

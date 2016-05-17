@@ -45,7 +45,7 @@ if($numrows ==1){
 }else {
 	
 			$hipass = md5($ipassword);
-			$query = mysqli_query($con,"SELECT * FROM client WHERE (email = '$iemail' OR username ='$iemail') AND (password ='$hipass' AND act=0)");
+			$query = mysqli_query($con,"SELECT * FROM client WHERE (email = '$iemail' OR username ='$iemail') AND (password ='$hipass' AND act=1)");
 			
 $numrows = mysqli_num_rows($query);
 

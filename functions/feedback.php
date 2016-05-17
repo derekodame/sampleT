@@ -10,13 +10,10 @@ $c =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['c'])));
 $d =mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['d'])));
 $e = mysqli_real_escape_string($con,nl2br(htmlspecialchars($_POST['e'])));
 
-$empty= "Input all fields or put N/A";
+$empty= "Field can not be empty";
 
 if($q){
-if($a){
-if($b){
-if($c){
-if($d){
+
 	
 		
 		$unique = md5($q);
@@ -37,13 +34,7 @@ $query = mysqli_query($con,"insert into feedbackq values('id','$q','$unique','0'
 	
 	
 	
-	}else  echo $empty;
 	
-	}else  echo $empty ;
-	
-	}else echo $empty;
-	
-	}else echo $empty;
 
 
 

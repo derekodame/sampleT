@@ -44,7 +44,8 @@ text-decoration:none; margin-left:2px;" href="../functions/logout.php" > logout<
 <span id="success"></span><br/>
 
 <fsorm method="post"  enctype="multipart/form-data">
-<input type="file"  title="Choose an excel file" name="excel" id="excel"    /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="Insert"/> <span  id="successs">loading...<img   width="15px"  height="15px"src="../pictures/loading.gif"></span>
+<input type="file"  title="Choose an excel file" name="excel" id="excel"    /><input name='sumb' id="excelb" type="button"   onclick="uploadfile();"value="Insert"/><span><i id="hss" style="color:black; cursor:pointer; font-size:30px;"
+ onclick="closedd('h.php');"> ? </i></span> <span  id="successs">loading...<img   width="15px"  height="15px"src="../pictures/loading.gif"></span>
 
 
 </form></div>
@@ -78,7 +79,7 @@ dropshow($con,"Symptoms_and_Disorders");
 
 </select>
 <input style="font-size:20px;" id="done_search_s" type="button" onclick="searchhe();"  value="search"/>
-</fordm>
+<span id="hssi"  style=" font-size:24px; cursor:pointer;" title="insert to database below">?</span></fordm>
 
 </div>
 
@@ -118,6 +119,8 @@ Stage of change</center>
 
 
 
+
+
 <div id=""><center>Evidence Level</center>
 <input onKeyUp="searche('Evidence_Level','#Evidence_Level');"  type="text" id="Evidence_Level" placeholder="Evidence Level" >
 <div   id="Evidence_Levels" style="background-color:green; border-radius:0 0 5px 5px; color:white; cursor:; z-index:27; overflow:scroll; width:; min-height:0px; max-height:400px;"></div>
@@ -126,7 +129,7 @@ Stage of change</center>
 <div id=""><center>Basis for Evidence</center>
 <textarea onKeyUp="searche('Basis_for_Evidence','#Basis_for_Evidence');" style="height:60px;" type="text" id="Basis_for_Evidence" placeholder="Basis for Evidence" ></textarea>
 
-<span id="adde" onClick="adde();" style="cursor:pointer; font-size:18px;  z-index:100px;color:white; background-color:green; border-radius:4px;  padding:1px; float:right; " >Insert</span><br/>
+<span  id ="hii" style="float:right; font-size:24px; cursor:pointer; " title="insert to database below">?</span><span id="adde" onClick="adde();" style="cursor:pointer; font-size:18px;  z-index:100px;color:white; background-color:green; border-radius:4px;  padding:1px; float:right; " >Insert</span><br/>
 <span id="s" style="font-size:15px; float:right; ";><span style="color:white;"></span></span>
 </div>
 
@@ -179,5 +182,47 @@ Stage of change</center>
 <div  id ="adminsrp"></div>
 </center>
 
+</div>
+
 
 <?Php include "../functions/footer.php";?>
+
+<div id="hi" style=" border:thin solid rgba(0,0,0,1.00);  position: fixed; top:150px; right:540px; background-color:white;">
+insert into database below <br/>
+<div style=" cursor:pointer;border:thin solid red; " hi="hx" onClick="hxx('hi');" ><center>close</center></div>
+</div>
+
+
+</div>
+<div id="hs" style=" border:thin solid rgba(0,0,0,1.00);  position: fixed; top:150px; right:540px; width:500px; background-color:white;">
+This upload engine accepts only excel files with the extension xlsx. 
+When uploading make sure you have 7 columns on your excel sheet, ie. age, stage of change , symptoms and disorders, psychological treatment, evidence level and basis for evidence.
+You don't have to give titles such as age for the first column or symptoms and disorders for the third column.Note! these steps are done on your excel sheet. when done you upload it here. :)
+<div style=" cursor:pointer;border:thin solid red; " hi="" onClick="hxx('hs');" title="close" ><center>close</center></div>
+</div>
+
+<div id="hsss" style=" border:thin solid rgba(0,0,0,1.00);  position: fixed; top:150px; right:540px; background-color:white;">
+Search through the database below. You can also edit and delete a row or column <br/>
+<div style=" cursor:pointer;border:thin solid red; " hi="hx" onClick="hxx('hsss');" ><center>close</center></div>
+<script type="text/javascript">
+/*function closedd (target){
+	var window_dimensions = "toolbars=no,menubar=no,location=no,scrollbars=yes,resizable=yes,status=yes"
+
+	
+	popwin = window.open(target,"windowName","width=350,height=350,status=yes");
+	popwin.moveTo(50,50);
+	
+	//window.open('t.php');
+	//alert('hat');
+}*/
+
+var d= document.getElementById("hi").style.display = "none";
+var s= document.getElementById("hs").style.display = "none";
+var s= document.getElementById("hsss").style.display = "none";
+function hxx(g){
+	
+	document.getElementById(g).style.display = "none";
+	
+	}
+
+</script>

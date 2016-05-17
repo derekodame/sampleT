@@ -6,6 +6,7 @@ while ($r=mysqli_fetch_array($ff)){
 	$fu= $r['firstname'];
 	$lu= $r['lastname'];
 	$u= $r['username'];
+	$ee= $r['email'];
 	} ?>
 <div id="sf"  >
 <center><div id="p" style="height:40px;"   >Updates </div></center>
@@ -25,7 +26,8 @@ echo $fu;
 <input id="checku" style="width:30px; height:30px; float:;"    type="checkbox" ></span></br>
 <input id="new"  title="New Password"   type="password" placeholder="New Password">
 <br/>
-<input title="<?PHp echo $fu ." ". $lu . ', if done click on the update button to update';?>" onClick="profileupdate();" type="button" value="Update" >
+<input title="<?PHp echo $fu ." ". $lu . ', if done, click on the update button to update';?>" onClick="profileupdate();" type="button" value="Update" >
+<input title="<?PHp echo $fu ." ". $lu  . ', if done, click to delete';?>" onClick="profiledelete('<?php echo $emailss?>');" type="button" value="Delete Account" >
 
 </div>
 

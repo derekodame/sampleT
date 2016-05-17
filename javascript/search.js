@@ -1,5 +1,24 @@
 
+$("#hii").click(function() {
+	
+	$("#hi").show();
+	});
+	
+	$("#hss").click(function() {
+	
+	$("#hs").show();
+	});
+	
+	$("#hssi").click(function() {
+	
+	$("#hsss").show();
+	});
 
+$("#hx").click(function() {
+	
+	$("#hii").hide();
+	});
+	
 
 //for tooltip
 
@@ -70,7 +89,7 @@ $('#popx').click(function () {
 
 // search button ------
 
-/*document.getElementById('done_search_s').disabled=true;
+document.getElementById('done_search_s').disabled=true;
 document.getElementById('done_search_s').style.backgroundColor='grey';
 document.getElementById('done_search_s').style.color='white';
 document.getElementById('done_search_s').style.cursor='not-allowed';
@@ -88,7 +107,7 @@ document.getElementById('done_search_s').style.cursor='pointer';
 		}else { b.disabled=true;}
 	
 	}
-*/
+
 
 // for id
 function _(id){
@@ -265,5 +284,22 @@ $('#p').html(data)
 if(data = "Update was succeful"){
 $('#welcome').html("Welcome " + f + " "+ l);
 }
+	});
+}
+
+
+//deleting user account
+
+function profiledelete(d){
+	
+	var p = $('#currentpass').val();
+	$.post("../functions/deleteuser.php", {d:d,p:p},function(data){
+	
+		$('#p').html(data)
+	if(data =="5"){
+			alert("You have been removed from the database.");
+		window.location="../functions/logout.php";	
+	}
+	
 	});
 }

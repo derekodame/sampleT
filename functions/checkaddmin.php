@@ -24,7 +24,7 @@ $numrowse = mysqli_num_rows($querye);
 
 if($numrows==0){
 	
-		$query = mysqli_query($con,"insert into admin_pass values('id','$i','$f','$l','addmin_$l','$e','$p')");
+		$query = mysqli_query($con,"insert into admin_pass values('id','$i','$f','$l','addmin_$e','$e','$p')");
 
 echo "$f $l was added as an admin";
 

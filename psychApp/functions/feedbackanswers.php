@@ -6,7 +6,14 @@ include"../functions/section.php";
 
 $query = mysqli_query($con,"SELECT * FROM feedadd ");
 echo "<table id='clientalh' >" ;
-echo "<tr><td style=\" border:thin solid black; \">question</td> <td  style=\" border:thin solid black; \" title=''>rate</td></tr>";
+echo "<tr><td style=\" border:thin solid black; \">question</td> <td  style=\" border:thin solid black; \" title=''>rate</td> 
+<td  style=\" border:thin solid black; width:70px; \" title=''>count 1</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>count 2</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>count 3</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>count 4</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>count 5</td>
+
+</tr>";
 
 echo "</table>";
 echo "<table style=\"background-color:;\" id='clientalh' >" ;
@@ -39,16 +46,37 @@ while($row=mysqli_fetch_array($query)){
 	$queryk = mysqli_query($con,"SELECT * FROM feedbacka where qid='$q' ");
 		$rowk=mysqli_fetch_array($queryk);
 			$ac= $rowk['comment'];
-			
+			$rc= $rowk['rate'];
 	$count =$queryk->num_rows;
 	
 	
+	
+	
+	//number of people who rated
+	$queryr = mysqli_query($con,"SELECT * FROM feedbacka where rate='1' and qid='$q' ");
+	$count1 =$queryr->num_rows;
+	$queryr = mysqli_query($con,"SELECT * FROM feedbacka where rate='2' and qid='$q' ");
+	$count2 =$queryr->num_rows;
+	$queryr = mysqli_query($con,"SELECT * FROM feedbacka where rate='3' and qid='$q' ");
+	$count3 =$queryr->num_rows;
+	$queryr = mysqli_query($con,"SELECT * FROM feedbacka where rate='4' and qid='$q' ");
+	$count4 =$queryr->num_rows;
+	$queryr = mysqli_query($con,"SELECT * FROM feedbacka where rate='5' and qid='$q' ");
+	$count5 =$queryr->num_rows;
 	
 	$t =round(($r)/($count));
 	
 	
 	
-		echo " <tr><td style=\" border:thin solid black; background-color:white; color:black; \" ><textarea style='width:154px;  resize:none;' disabled  >$qq</textarea></td><td style=\" border:thin solid black; background-color:white; color:black;\" >$t</td><td style=\" border:thin solid black; background-color:white; color:black;\" >
+		echo " <tr><td style=\" border:thin solid black; background-color:white; color:black; \" ><textarea style='width:154px;  resize:none;' disabled  >$qq</textarea></td><td style=\" border:thin solid black; background-color:white; color:black;\" >$t</td>
+		
+<td style=\" border:thin solid black; background-color:white; color:black; width:70px;\" >$count1</td>
+<td style=\" border:thin solid black; background-color:white; color:black; width:70px;\" >$count2</td>
+<td style=\" border:thin solid black; background-color:white; color:black;width:70px;\" >$count3</td>
+<td style=\" border:thin solid black; background-color:white; color:black; width:70px;\" >$count4</td>
+<td style=\" border:thin solid black; background-color:white; color:black;width:70px;\" >$count5</td>
+
+<td style=\" border:thin solid black; background-color:white; color:black;\" >
 <span onclick=\"closedd('t.php?g=$q');\" style=\"cursor:pointer;\">link to question answers</span></td></tr>";
 		
 		

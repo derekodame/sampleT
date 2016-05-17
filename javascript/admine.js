@@ -1,12 +1,15 @@
 
+//all help
+
+
 
 $('#dropp').hide();
 $('#uploade').hide();
 $('#searchee').hide();
 
+$("#feedid").load("../functions/showfeedback.php");
 
-
-
+$("#sdc").load("../functions/admindb.php");
 
 $('#insertm').click(function (){
 	
@@ -39,37 +42,71 @@ $('#upclient').hide();
 $('#feedbackanswers').hide();
 $('#newupdate').hide();
 $('#feedadm').hide();
+$('#deletedate').hide();
 	});
 	
+$('#deleteacc').click(function (){
+	
+$('#deletedate').show();
+$('#adupdate').hide();
+$('#upclient').hide();
+$('#feedbackanswers').hide();
+$('#newupdate').hide();
+$('#feedadm').hide();
+	});	
 
 $('#ade').click(function (){
-	
+	$('#deletedate').hide();
 $('#adupdate').hide();
 $('#feedbackanswers').hide();
 $('#upclient').hide();
 $('#feedadm').hide();
 
 $('#newupdate').show();
+var su = "http://localhost/psychApp/functions/admindb.php";
+$('#newupdate').load(su);
+
 	});
 	
+	
+function admindelete(a){
+	
+	
+	var p = prompt("Please input your current password", "");
+    
+    
+
+	$.post("../functions/admindelete.php", {a:a,p:p},function(data){
+		
+		
+		
+	
+		
+	if(data == "invalid input"){
+		alert(data);
+		}else if(data == "account deleted"){
+		window.location="../functions/logout.php";
+		alert(data);
+		}
+	
+	});
+}	
+
+
 //feedback *****
 
 
 function feed(){
 		var q = $('#q').val();
-		var a = $('#a').val();
-		var b = $('#b').val();
-		var c = $('#c').val();
-		var d = $('#d').val();
-		var e = $('#e').val();
+		
 		
 //alert(q);
 		
-		$.post('../functions/feedback.php', {q:q,a:a,b:b,c:c,d:d,e:e},function(data){
+		$.post('../functions/feedback.php', {q:q},function(data){
 			
 				
 				$("#feeds").html(data);
-				
+				$("#feedid").load("../functions/showfeedback.php");
 		
 		  
 	});
@@ -113,11 +150,18 @@ function deleps(d){
 
 //range feedback
 
-function range(id,e){
-	var ac = $('#r'+id).val();
-	var an = $('#cn'+id).val();
-	$('#rg'+id).text(ac);
-	//$('#rg'+id).text(ac+" "+ e +" "+ an);
+function range(id,e,identity){
+	$('#'+id).hide("");
+var cn = document.getElementsByName(identity);
+for (var i = 0, length = cn.length; i < length; i++) {
+    if (cn[i].checked) {
+       var ac=(cn[i].value);
+
+var an = $('#cn'+id).val();
+	
+	
+
+	
 	
 	$.post('../functions/feedadmin.php', {id:id,e:e,ac:ac,an:an},function(data){
 			
@@ -127,6 +171,11 @@ function range(id,e){
 	
 			
 				});
+        break;
+    }
+}
+	
+	
 	
 	}
 
@@ -139,6 +188,7 @@ $('#upclient').show();
 $('#feedadm').hide();
 $('#feedbackanswers').hide();
 $('#newupdate').hide();
+$('#deletedate').hide();
 	});
 	
 	
@@ -149,6 +199,7 @@ $('#upclient').hide();
 $('#feedadm').show();
 $('#feedbackanswers').hide();
 $('#newupdate').hide();
+$('#deletedate').hide();
 
 	});
 $('#fea').click(function (){
@@ -157,8 +208,9 @@ $('#fea').click(function (){
 $('#upclient').hide();
 $('#feedadm').hide();
 $('#feedbackanswers').show();
-$('#newupdate').hide();
 
+$('#newupdate').hide();
+$('#deletedate').hide();
 	});
 	
 	
@@ -249,6 +301,7 @@ function add_admin(){
 			
 				
 				$("#add_adminse").html(data);
+				$("#sdc").load("../functions/admindb.php");
 				
 		
 		  
@@ -272,7 +325,6 @@ if(r==1){
 	
 	
 //check if addmin
-
 function checkaddmin(i,f,l,e,p,ade){
 	//alert(ade);
 	
