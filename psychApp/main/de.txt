@@ -1,0 +1,21 @@
+
+Forgot Your Password=Olvide mi contrasena
+Create an account=crea una cuenta
+Sign In=Registrarse
+Choose language=elige lengua
+Spanish=Espanol
+Logout=Cerrar sesion
+Insert manually=insertar manualmente
+Search=buscar
+Upload=subir
+Email/Userid=Email/ID de usuario
+firstname=nombre de pila
+lastname=apellido
+email=correo electronico
+password=contrasena
+confirm password=Confirmar contrasena
+Reset=Reiniciar
+Done=hecho
+input firstname=tttrt
+input lastname=
+input email=

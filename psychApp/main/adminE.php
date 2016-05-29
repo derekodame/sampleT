@@ -6,6 +6,18 @@ include"../functions/adminf.php";
 include"../functions/drop.php";
 include"../functions/section.php";
 
+//translate
+require_once('class.translation.php');
+
+if(isset($llk)){
+	$translate = new Translator($llk);
+}
+else{
+	$translate = new Translator('en');
+}
+
+
+
 //check for admin id
 $check = mysqli_query($con,"select * from admin_pass where email ='$emailss'");
 $num = mysqli_num_rows($check);
@@ -28,11 +40,11 @@ if ($num >0){}else {header("location: ../index.php");}
 
 <div id="heade">
 <span id="logout" ><a  style="color:orange; font-size:20px;
-text-decoration:none; margin-left:2px;" href="../functions/logout.php" > logout</a></span>
-<span id="insertm"  style=" cursor:pointer; font-size:20px; color:green;  border-left:thin solid green; border-right:thin solid green; padding:2px;">Insert manually</span> 
- <span id="uploadee" style=" cursor:pointer; font-size:20px; color:green;  ">Upload</span>
- <span id="searched" style="cursor:pointer; font-size:20px; color:green; border-left:thin solid green;  padding:2px;"> Search </span>
- <span id="cliente" ><a  href="admin.php" style=" text-decoration:none; color:orange; border-left:thin solid green; padding:2px;"> Client/admin</a> </span>
+text-decoration:none; margin-left:2px;" href="../functions/logout.php" > <?php $translate->__('Logout'); ?></a></span>
+<span id="insertm"  style=" cursor:pointer; font-size:20px; color:green;  border-left:thin solid green; border-right:thin solid green; padding:2px;"> <?php $translate->__('Insert manually'); ?></span> 
+ <span id="uploadee" style=" cursor:pointer; font-size:20px; color:green;  "><?php $translate->__('Upload'); ?></span>
+ <span id="searched" style="cursor:pointer; font-size:20px; color:green; border-left:thin solid green;  padding:2px;"> <?php $translate->__('Search'); ?> </span>
+ <span id="cliente" ><a  href="admin.php" style=" text-decoration:none; color:orange; border-left:thin solid green; padding:2px;"><?php $translate->__('Client/Admin'); ?> </a> </span>
 <span id="logout"><a  href="../functions/logout.php"  title="logout"></a></span>
 </div>
 
@@ -152,7 +164,7 @@ Stage of change</center>
 </div>
 <br/><br/>
 
-<center><span id='ii' style="position:fixed; top:0px;  left:400px;font-size:20px; width:200px;"></span>
+<center><span id='ii' style="position:fixed; top:0px;  left:600px;font-size:20px; width:200px;"></span>
 <span id='hidden' style="position:fixed; top:113px;  left:-100px;font-size:25px;">1</span>
 
 

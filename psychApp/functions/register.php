@@ -1,6 +1,7 @@
 <?php 
 include"error.php";
 include"connection.php";
+require('class.translation.php');
 
 session_start();
 
@@ -8,8 +9,24 @@ $id = $_SESSION['id'];
 $emailss = $_SESSION['email'];
 $lasts	= $_SESSION['lastname'];
 $firsts = $_SESSION['firstname'];
+$llk = $_SESSION['de'];
 
-echo $emailss;
+
+
+
+
+
+
+if(isset($llk)){
+
+
+
+	$translate = new Translator($llk);
+}
+else{
+	$translate = new Translator('en');
+}
+
 
 //for date settings
 $date = time();
@@ -100,6 +117,6 @@ if($numrows ==1){
 		}else echo "Email format not valid";
 		}else echo "input email";
 		}else echo "input lastname";
-		}else echo  "input firstname";
+		}else   $translate->__('input firstname');
 		
 		
