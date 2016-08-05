@@ -6,12 +6,12 @@ include"../functions/section.php";
 
 $query = mysqli_query($con,"SELECT * FROM feedadd ");
 echo "<table id='clientalh' >" ;
-echo "<tr><td style=\" border:thin solid black; \">question</td> <td  style=\" border:thin solid black; \" title=''>rate</td> 
-<td  style=\" border:thin solid black; width:70px; \" title=''>count 1</td>
-<td  style=\" border:thin solid black;width:70px; \" title=''>count 2</td>
-<td  style=\" border:thin solid black;width:70px; \" title=''>count 3</td>
-<td  style=\" border:thin solid black;width:70px; \" title=''>count 4</td>
-<td  style=\" border:thin solid black;width:70px; \" title=''>count 5</td>
+echo "<tr><td style=\" border:thin solid black; \">". $translate->__('question')."</td> <td  style=\" border:thin solid black; \" title=''>rate</td> 
+<td  style=\" border:thin solid black; width:70px; \" title=''>". $translate->__('count') . " 1</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>". $translate->__('count') . " 2</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>". $translate->__('count') . " 3</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>". $translate->__('count') . " 4</td>
+<td  style=\" border:thin solid black;width:70px; \" title=''>". $translate->__('count') . " 5</td>
 
 </tr>";
 

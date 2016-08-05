@@ -1,4 +1,6 @@
 
+
+
 $("#hii").click(function() {
 	
 	$("#hi").show();
@@ -282,7 +284,7 @@ function profileupdate(){
 $('#p').html(data)	
 
 if(data = "Update was succeful"){
-$('#welcome').html("Welcome " + f + " "+ l);
+//$('#welcome').html("Welcome " + f + " "+ l);
 }
 	});
 }

@@ -8,6 +8,25 @@ include"connection.php";
 
 include"../functions/section.php";
 
+require_once('class.translation.php');
+
+
+
+
+
+
+
+
+if(isset($llk)){
+$translate = new Translator($llk);
+
+
+}
+else{
+	
+	$translate = new Translator('en');
+}
+
 //check for admin id
 $check = mysqli_query($con,"select * from client where email ='$emailss'");
 $num = mysqli_num_rows($check);
@@ -33,14 +52,14 @@ if($num>0){
 <span id="logout"><a  href="../functions/logout.php" title="Log Out" ></a></span> 
 
 <span id="setting" > 
-<a style=" margin-left:3px; color:orange;" href="./main.php" title="Main page"> Main</a></span>
+<a style=" margin-left:3px; color:orange;" href="./main.php" title="Main page"><?php echo $translate->__('Main') ?> </a></span>
 <span id= "welcome"><a style=" font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif;color:white; text-decoration:none; background-color: ;" href="./profilec.php" title="Your profile edit">
 
 <?php
 
 $ff = mysqli_query($con,"select * from client where email ='$emailss'");
 while ($r=mysqli_fetch_array($ff)){
-	echo "Welcome ". $r['firstname']." ". $r['lastname'];
+	echo  $translate->__('Welcome'). $r['firstname']." ". $r['lastname'];
 	}
 
  ?>

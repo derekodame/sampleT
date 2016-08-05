@@ -1,5 +1,12 @@
 // JavaScript Document
 //sign in -----------
+$("#ll").hide();
+$("#show_lan").click(function(){
+	
+	$("#ll").show();
+	
+	})
+
 function signin(){
 	var ee = $("#iemail").val();
 	var piy = $("#ipassword").val();

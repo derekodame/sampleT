@@ -18,12 +18,12 @@ $llk = $_SESSION['de'];
 
 
 if(isset($llk)){
+$translate = new Translator($llk);
 
 
-
-	$translate = new Translator($llk);
 }
 else{
+	
 	$translate = new Translator('en');
 }
 
@@ -57,6 +57,7 @@ $datee = "  $title $day,$year";
 
 
 	if($first){
+		
 		if($last){
 			if($email){
 				if((strlen($email) >= 7) && (strstr($email, "@")) && (strstr($email, "."))){
@@ -111,12 +112,12 @@ if($numrows ==1){
 	} else echo "User already exist";
 
 
-		}else echo "Password do not match";
-		}else echo "Password is too short";
-		}else echo "Input password";
-		}else echo "Email format not valid";
-		}else echo "input email";
-		}else echo "input lastname";
+		}else $translate->__("Password do not match") ;
+		}else $translate->__("Password is too short") ;
+		}else $translate->__("Input password") ;
+		}else $translate->__("Email format not valid") ;
+		}else $translate->__("input email") ;
+		}else $translate->__("input lastname") ;
 		}else   $translate->__('input firstname');
 		
 		

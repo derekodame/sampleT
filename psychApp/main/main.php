@@ -3,6 +3,25 @@
 include"../functions/connection.php";
 include"../functions/error.php";
 include"../functions/drop.php";
+
+require_once('class.translation.php');
+
+
+
+
+
+
+
+
+if(isset($llk)){
+$translate = new Translator($llk);
+
+
+}
+else{
+	
+	$translate = new Translator('en');
+}
 ?>
 
 
@@ -15,7 +34,7 @@ include"../functions/drop.php";
 
 
 <select name="sel" id="sel" onchange="displaye();"  title="Age">
-<option style=" display:none;">Age</option>
+<option style=" display:none;"><?php echo $translate->__('Age')?></option>
 
 
 <?php 
@@ -26,21 +45,21 @@ dropshow($con,"Age");
 </select>
 <select  name="sel2" id="sel2" onchange="displaye();" title="Stage of Change" >
 
-<option style="display:none;">Stage of Change</option>
+<option style="display:none;"><?php echo $translate->__('Stage of Change')?></option>
 <?php 
 dropshow($con,"Stage_of_Change");
 
 ?>
 </select>
 <select name="sel3" id="sel3" onchange="displaye();"  title="Symptoms and Disorders">
-<option style="display:none;">Symptoms and Disorders</option>
+<option style="display:none;"><?php echo $translate->__('Symptoms and Disorders')?></option>
 <?php 
 dropshow($con,"Symptoms_and_Disorders");
 
 ?>
 
 </select>
-<input id="done_search_s" type="button" onclick="searchh();"  value="search"/>
+<input id="done_search_s" type="button" onclick="searchh();"  value="<?php echo $translate->__('Search')?>"/>
 
 </div>
 

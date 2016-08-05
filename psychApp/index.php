@@ -16,6 +16,7 @@ $_SESSION['de']=$ll;
 	$translate = new Translator($_GET['lang']);
 }
 else{
+	session_destroy();
 	$translate = new Translator('en');
 }
  ?>
@@ -44,10 +45,13 @@ if($emailss){
 
 
 <body id="s" >
-<center><?php $translate->__('Choose language'); ?> :   <a  title="spanish" href="index.php?lang=de"><?php $translate->__('Spanish'); ?></a>::<a  title="english" href="index.php">english</a>
+<div id="lann">
+<center><span id="show_lan" style="cursor:pointer;"><?php  echo $translate->__('Choose language'); ?></span><br/>   <div id="ll"><a  title="spanish" href="index.php?lang=de"><?php echo $translate->__('Spanish'); ?></a><br/><a  title="english" href="index.php">english</a></div>
 
-   
+   <p></p>
 </center>
+
+</div>
 <div id="top"></div>
 
 
@@ -59,21 +63,21 @@ if($emailss){
 <span  id="" ><div id="signin" style="height:50px;" ></div>
 </span></div>
 <div>
-<span><br/></span><input   autofocus name ="iemail" id="iemail" type="email"  placeholder="<?php $translate->__('Email/Userid'); ?>"   title="<?php $translate->__('Email/Userid'); ?>" value=""  ></div>
+<span><br/></span><input   autofocus name ="iemail" id="iemail" type="email"  placeholder="<?php echo $translate->__('Email/Userid'); ?>"   title="<?php echo $translate->__('Email/Userid'); ?>" value=""  ></div>
 <div>
 <span><center></center></span>
-<input name ="ipassword" id="ipassword" type="password" placeholder="<?php $translate->__('password'); ?>"  title="<?php $translate->__('password'); ?>"required ></div>
+<input name ="ipassword" id="ipassword" type="password" placeholder="<?php echo $translate->__('password'); ?>"  title="<?php echo $translate->__('password'); ?>"required ></div>
 
 
 
-<div><input name ="ilogin" id="ilogin"type="submit" value="<?php $translate->__('Sign In'); ?>" onclick="signin();"  ></div>
+<div><input name ="ilogin" id="ilogin"type="submit" value="<?php echo $translate->__('Sign In'); ?>" onclick="signin();"  ></div>
 <span  style=" margin-top:2px; font-size:17px"></span>
 </form>
 <div><span style="float:ridght; color:rgba(43,43,43,1.00); cursor:pointer;"><center>
 
-<?php $translate->__('Forgot Your Password'); ?>
+<?php echo $translate->__('Forgot Your Password'); ?>
 </center></span></div>
-<div style="color:white; cursor:pointer;" id="regn"><center><?php $translate->__('Create an account'); ?></center></div>
+<div style="color:white; cursor:pointer;" id="regn"><center><?php echo $translate->__('Create an account'); ?></center></div>
 
 </div>
 <p></p>
@@ -84,15 +88,15 @@ if($emailss){
  <div id='regp' style="height:80px;"  > </div>
 <fordm action="" method="post">
 <div >
-<input name ="first" id ="first"type="text"  placeholder="<?php $translate->__('firstname'); ?>" required value="" title="<?php $translate->__('firstname'); ?>">
-<input name ="last" id = "last" type="text"  placeholder="<?php $translate->__('lastname'); ?>" title="<?php $translate->__('lastname'); ?>" required value=""></div>
+<input name ="first" id ="first"type="text"  placeholder="<?php echo $translate->__('firstname'); ?>" required value="" title="<?php echo $translate->__('firstname'); ?>">
+<input name ="last" id = "last" type="text"  placeholder="<?php echo $translate->__('lastname'); ?>" title="<?php echo $translate->__('lastname'); ?>" required value=""></div>
 <div>
-<input oncopy="copy()" name ="email" id ="email" type="email" placeholder="<?php $translate->__('email'); ?>" title="<?php $translate->__('email'); ?>"  required value=""></div>
+<input oncopy="copy()" name ="email" id ="email" type="email" placeholder="<?php echo $translate->__('email'); ?>" title="<?php echo $translate->__('email'); ?>"  required value=""></div>
 
-<div><input name ="password" id="password" type="password" placeholder="<?php $translate->__('password'); ?>" required value="" title="<?php $translate->__('password'); ?>"></div>
-<div><input  name ="conpass" id="conpass" type="password" placeholder="<?php $translate->__('confirm password'); ?>" required value="" title="<?php $translate->__('confirm password'); ?>"></div>
-<div><input name ="reset" id="reset" type="button" value="<?php $translate->__('Reset'); ?>">
-<input onClick="register();" name ="regdone" id="regdone" type="submit" value="<?php $translate->__('Done'); ?>"></div>
+<div><input name ="password" id="password" type="password" placeholder="<?php echo $translate->__('password'); ?>" required value="" title="<?php echo $translate->__('password'); ?>"></div>
+<div><input  name ="conpass" id="conpass" type="password" placeholder="<?php echo $translate->__('confirm password'); ?>" required value="" title="<?php echo $translate->__('confirm password'); ?>"></div>
+<div><input name ="reset" id="reset" type="button" value="<?php echo $translate->__('Reset'); ?>">
+<input onClick="register();" name ="regdone" id="regdone" type="submit" value="<?php echo $translate->__('Done'); ?>"></div>
 </form>
 
 <div id="sin"></div>

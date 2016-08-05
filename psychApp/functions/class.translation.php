@@ -10,9 +10,9 @@ class Translator {
 	
     private function findString($str) {
         if (array_key_exists($str, $this->lang[$this->language])) {
-			echo $this->lang[$this->language][$str];
-			return;
-        }
+			return $this->lang[$this->language][$str];
+			
+        }else {$str;}
         echo $str;
     }
     
@@ -30,7 +30,7 @@ class Translator {
                 return $this->findString($str);
             }
             else {
-                echo $str;
+                return $str;
             }
         }
         else {

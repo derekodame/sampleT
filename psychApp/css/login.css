@@ -1,6 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+#show_lan{
+	border:black thin solid;
+	}
+#lann{
+	height:50px;
+	
+	}
+#ll{
+	width:160px;
+	
+	
+	}
 
 #s{
 	background-color: #000000;

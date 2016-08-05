@@ -216,9 +216,14 @@ $('#deletedate').hide();
 	
 
 //load page 1
-function loadp(){ $.get('../functions/pagination.php', {v:1},function(data){
+function loadp(sp){ 
+
+
+$.get('../functions/pagination.php', {v:1,sp:sp},function(data){
 $("#adminsrp").html( data);
-$("#ii").html(" "+"<span style='color:red;'>Page "+1+"</span>");});}
+
+});
+}
 
 
 //small search result show in admine
@@ -230,60 +235,7 @@ $('#Symptoms_and_Disorderss').hide();
 $('#Stage_of_Changes').hide();
 
 //insert data to database
-function adde(){
-		var age = $('#Age').val();
-		var stage = $('#Stage_of_Change').val();
-		var symptoms = $('#Symptoms_and_Disorders').val();
-		var psychological = $('#Psychological_Treatment').val();
-		var evidence = $('#Evidence_Level').val();
-		var basis = $('#Basis_for_Evidence').val();
-		
-//alert(age);
-		
-		$.post('../functions/insertshow.php', {age:age,stage:stage,symptoms:symptoms,psychological:psychological,evidence:evidence,basis:basis},function(data){
-			
-				
-				$("#s").html(data);
-				$("#s").show();
-			//clear
-			/*$('#age').val("");
-		 $('#stage').val("");
-		$('#symptoms').val("");
-		 $('#psychological').val("");
-		  $('#evidence').val("");
-		  */
-		 $('#Basis_for_Evidence').val("");
-		 		//hide
-		$('#ages').hide();
-		 $('#stages').hide();
-		$('#symptomss').hide();
-		 $('#psychologicals').hide();
-		  $('#evidences').hide();
-		 $('#basiss').hide();
-		 
-		 $("#ii").html(" "+"<span style='color:red;'>Page "+1+"</span>");
-		 $("#adminsrp").show();
-		
-		  
-		  $('#hidden').text(1);
-		  
-		  
-		  $.get('../functions/pagination.php', {v:1},function(data){
-	$("#adminsrp").html( data);
 
-$('#search_resulte').hide();
-
-$('#left_p').show();
-$('#page').show();
-$('#prev').show();
-$('#nextt').show();
-$("#adminsrp").show();
-$("#search_resulte").hide();
-
-			});
-		  
-	});
-}
 
 
 //add admins
@@ -425,7 +377,7 @@ if(v==v){
 	$("#s").hide();
 	
 	
-	$.get('../functions/pagination.php', {v:v},function(data){
+	$.get('../functions/pagination.php?sp=de', {v:v},function(data){
 	$("#adminsrp").html( data);
 $('#search_resulte').hide();
 $("#ii").html("<span style='color:red;'> Page"+ v+"</span> ");
@@ -454,7 +406,7 @@ if(v==v){
 	$("#s").hide();
 	
 	
-	$.get('../functions/pagination.php', {v:v},function(data){
+	$.get('../functions/pagination.php?lang=de', {v:v},function(data){
 	$("#adminsrp").html( data);
 $('#search_resulte').hide();
 
